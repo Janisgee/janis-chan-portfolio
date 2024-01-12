@@ -1,23 +1,78 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './Main.js';
+import bubble from './images/bubble.png';
+import shadow from './images/shadow-3.png';
 
 function App() {
+  const moveElements = (e) => {
+    let backgroundWord = document.querySelector('.containerbackground');
+
+    let position = backgroundWord.getBoundingClientRect();
+    let tracker = document.querySelector('.tracker');
+    /*Adjust the cursor position*/
+    tracker.style.left = `${e.clientX}px`;
+    tracker.style.top = `${e.clientY}px`;
+    tracker.style.opacity = 1;
+
+    console.log(e);
+    /*Adjust the clip-path*/
+    backgroundWord.style.setProperty('--x', e.clientX - position.top + 'px');
+    backgroundWord.style.setProperty('--y', e.clientY - position.left + 'px');
+  };
+  document.addEventListener('mousemove', moveElements);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className='App'>
+      <div className='container'>
+        <div class='tracker'></div>
+        <div
+          className='containerbackground  to-right animation-common'
+          style={{ '--delay': '0s' }}
+          data-text='Software Developer'
         >
-          Learn React
-        </a>
-      </header>
+          <div className='background'>Software</div>
+          <div className='background'>Developer</div>
+          <div className='background-jc'>Janis Chan</div>
+        </div>
+        <img
+          src={shadow}
+          alt=''
+          class='shadow animation-common sm-hidden'
+          // data-offset='.02'
+          style={{ '--delay': '0.35s' }}
+        />
+        <img
+          src={shadow}
+          alt=''
+          class='shadow shadow-md animation-common sm-hidden'
+          // data-offset='.02'
+          style={{ '--delay': '0.35s' }}
+        />
+        <img
+          src={bubble}
+          alt=''
+          class='bubble animation-common sm-hidden'
+          // data-offset='.05'
+          style={{ '--delay': '0.5s' }}
+        />
+        <img
+          src={bubble}
+          alt=''
+          class='bubble bubble-md animation-common sm-hidden'
+          // data-offset='.025'
+          style={{ '--delay': '0.25s' }}
+        />
+        <img
+          src={bubble}
+          alt=''
+          class='bubble bubble-lg animation-common sm-hidden'
+          // data-offset='.02'
+          style={{ '--delay': '0.35s' }}
+        />
+        <header>
+          <Main />
+        </header>
+      </div>
     </div>
   );
 }

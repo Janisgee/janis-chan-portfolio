@@ -1,0 +1,33 @@
+.main-wrapper {
+  z-index: 3;
+}
+
+.janis-logo {
+  margin: 5vh 3vw;
+  width: 7vw;
+  animation: 15s spin infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navBar {
+  position: absolute;
+  top: 210%;
+  left: 2%;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.navBar li {
+  list-style: none;
+  text-align: left;
+}
+
+.navBar li:hover {
+  color: #f20467;
+  font-size: x-large;
+}

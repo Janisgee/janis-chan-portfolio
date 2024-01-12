@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;800&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Tektur', sans-serif;
+
+  background-color: rgb(219, 217, 217);
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (min-width: 64em) {
+  .container {
+    position: relative;
+  }
+
+  .containerbackground {
+    position: absolute;
+    z-index: -1;
+    top: -9%;
+    left: 10%;
+    transform: rotate3d(6, 4, 4, -60deg);
+    text-transform: uppercase;
+    font-size: 10em;
+    font-weight: 700;
+    user-select: none;
+    color: #f5f5f5;
+    text-shadow: 0px 1px 1px #919191, 0px 2px 1px #919191, -1px 3px 1px #919191,
+      -2px 4px 1px #919191, -3px 5px 1px #919191, -4px 6px 1px #919191,
+      -5px 7px 1px #919191, -6px 8px 1px #919191, -7px 9px 1px #919191,
+      -8px 10px 1px #919191, -9px 11px 1px #919191, -10px 12px 1px #919191,
+      -11px 13px 1px #919191, -12px 14px 1px #919191, -13px 15px 1px #919191,
+      -14px 16px 1px #919191, -15px 17px 1px #919191,
+      -23px 26px 6px rgba(16, 16, 16, 0.4),
+      -26px 30px 10px rgba(16, 16, 16, 0.2),
+      -29px 33px 35px rgba(16, 16, 16, 0.2),
+      -31px 36px 60px rgba(16, 16, 16, 0.4);
+
+    color: #fff;
+    display: inline-block;
+  }
+
+  .containerbackground:before {
+    position: absolute;
+    content: attr(data-text);
+    color: #f20467;
+
+    clip-path: circle(0.4em at var(--x, -500%) var(--y, 20%));
+  }
+
+  .background-jc {
+    opacity: 0.15;
+    text-shadow: none;
+    color: rgb(63, 62, 62);
+    padding-left: 12vw;
+  }
+
+  .bubble {
+    position: absolute;
+    top: -2vh;
+    left: 11vw;
+    z-index: -1;
+    width: 20vw;
+    opacity: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: bottom left;
+  }
+
+  .bubble-md {
+    top: 7.5vh;
+    left: 68.5vw;
+    width: 39vw;
+    transform-origin: top;
+  }
+
+  .bubble-lg {
+    top: 40vh;
+    right: 11vw;
+    left: auto;
+    width: 49vw;
+    transform-origin: bottom right;
+  }
+
+  .shadow {
+    position: absolute;
+    top: 2vh;
+    left: 18vw;
+    z-index: -1;
+    width: 20vw;
+    user-select: none;
+    -webkit-user-drag: none;
+    transform-origin: bottom left;
+  }
+
+  .shadow-md {
+    top: 49.5vh;
+    left: 68.5vw;
+    width: 20vw;
+    transform-origin: top;
+  }
+  /* Cursor tracker */
+  /* .tracker {
+    position: fixed;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 6px solid #141414;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: top 0.075s, left 0.075s, opacity 0.5s;
+    opacity: 0;
+  } */
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .animation-common {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.63, 1);
+    animation-delay: var(--delay);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .bubble {
+    scale: 0;
+    animation-name: scaleIn, bounce;
+    animation-duration: 10s, 5s;
+    animation-iteration-count: 1, infinite;
+    transition: translate 4s;
   }
-  to {
-    transform: rotate(360deg);
+
+  .shadow {
+    scale: 0;
+    animation-name: scaleIn, fadeIn;
+    animation-duration: 10s, 5s;
+    animation-iteration-count: 1, infinite;
+    transition: translate 4s;
+    transform: rotate3d(6, 4, 4, -60deg);
+  }
+
+  .to-right {
+    display: block;
+    opacity: 0;
+  }
+
+  .to-right {
+    animation-name: toRight;
+  }
+
+  /* Keyframes */
+  @keyframes toRight {
+    from {
+      opacity: 1;
+
+      transform: translateX(-100%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none, rotate3d(6, 4, 4, -60deg);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      scale: 7;
+    }
+
+    to {
+      scale: 1;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-0px);
+    }
+
+    50% {
+      transform: translateY(-150px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
   }
 }
