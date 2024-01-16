@@ -1,3 +1,6 @@
+import './Navbar.css';
+import Navbar from './Navbar.js';
+
 export default function About() {
-  return <div></div>;
+  return <div className='about'></div>;
 }
