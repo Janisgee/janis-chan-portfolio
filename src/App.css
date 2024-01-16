@@ -48,11 +48,19 @@ body {
     clip-path: circle(0.4em at var(--x, -500%) var(--y, 20%));
   }
 
-  .background-jc {
+  .softwareWord,
+  .developerWord {
     opacity: 0.15;
     text-shadow: none;
     color: rgb(63, 62, 62);
-    padding-left: 12vw;
+  }
+
+  .softwareWord:before,
+  .developerWord:before {
+    position: absolute;
+    content: attr(data-text);
+    color: #f20467;
+    clip-path: circle(0.4em at var(--x, -500%) var(--y, 20%));
   }
 
   .bubble {

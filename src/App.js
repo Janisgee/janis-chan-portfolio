@@ -6,8 +6,8 @@ import shadow from './images/shadow-3.png';
 function App() {
   const moveElements = (e) => {
     let backgroundWord = document.querySelector('.containerbackground');
-
     let position = backgroundWord.getBoundingClientRect();
+
     let tracker = document.querySelector('.tracker');
     /*Adjust the cursor position*/
     tracker.style.left = `${e.clientX}px`;
@@ -28,11 +28,11 @@ function App() {
         <div
           className='containerbackground  to-right animation-common'
           style={{ '--delay': '0s' }}
-          data-text='Software Developer'
+          data-text='Janis Chan Software Developer'
         >
-          <div className='background'>Software</div>
-          <div className='background'>Developer</div>
-          <div className='background-jc'>Janis Chan</div>
+          <div>Janis Chan</div>
+          <div className='softwareWord'>Software</div>
+          <div className='developerWord'>Developer</div>
         </div>
         <img
           src={shadow}
