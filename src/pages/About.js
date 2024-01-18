@@ -1,5 +1,5 @@
 import './About.css';
-import HeadingBar from './HeadingBar.js';
+import HeadingBar from './utilities/HeadingBar.js';
 
 export default function About() {
   return (

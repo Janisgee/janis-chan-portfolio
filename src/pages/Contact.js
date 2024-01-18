@@ -1,4 +1,4 @@
-import HeadingBar from './HeadingBar';
+import HeadingBar from './utilities/HeadingBar';
 
 export default function Contact() {
   return (

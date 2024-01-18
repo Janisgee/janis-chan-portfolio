@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
 .projects {
   color: white;
   z-index: 5;
   font-size: 2.5em;
   list-style: none;
   overflow: overlay;
-  height: 75vh;
-  width: 35vw;
-  padding-left: 7vw;
+  height: 65vh;
+  width: 38vw;
+  padding-left: 5vw;
   cursor: pointer;
   transform: rotate3d(6, 4, 4, -60deg);
   text-shadow: 0px 1px 1px #919191, 0px 2px 1px #919191, -1px 3px 1px #919191,
@@ -14,6 +16,7 @@
     -5px 7px 1px #919191, -6px 8px 1px #919191, -7px 9px 1px #919191,
     -23px 26px 6px rgba(16, 16, 16, 0.4), -26px 30px 10px rgba(16, 16, 16, 0.2),
     -29px 33px 35px rgba(16, 16, 16, 0.2), -31px 36px 60px rgba(16, 16, 16, 0.4);
+  line-height: 15vh;
 }
 
 ::-webkit-scrollbar {
@@ -22,6 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
+  direction: ltr;
   background: black;
 }
 
@@ -31,4 +35,32 @@
 
 .projects li:hover {
   color: #f20467;
+}
+
+.work-image {
+  width: 40vw;
+  border-radius: 15px;
+  box-shadow: 8px 8px 10px 1px rgba(108, 108, 109, 0.6);
+}
+
+.content {
+  display: flex;
+  gap: 9vw;
+}
+
+.content p {
+  width: 40vw;
+}
+
+.click-for-more {
+  color: black;
+}
+
+.click-for-more:hover {
+  color: #f20467;
+}
+
+.skill-image {
+  height: 5vh;
+  margin: 0 0.5vw;
 }
