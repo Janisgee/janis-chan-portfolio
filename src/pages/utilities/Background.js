@@ -1,6 +1,6 @@
 import './Background.css';
-import bubble from '../images/bubble.png';
-import shadow from '../images/shadow-3.png';
+import bubble from '../../images/bubble.png';
+import shadow from '../../images/shadow-3.png';
 
 export default function Background() {
   const moveElements = (e) => {

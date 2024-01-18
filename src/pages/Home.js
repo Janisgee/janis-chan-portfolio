@@ -1,5 +1,5 @@
-import Background from './Background.js';
-import Navbar from './Navbar.js';
+import Background from './utilities/Background.js';
+import Navbar from './utilities/Navbar.js';
 
 export default function Home() {
   return (
