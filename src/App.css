@@ -8,3 +8,7 @@ body {
   background-color: rgb(219, 217, 217);
   overflow: hidden;
 }
+
+.side-wrapper {
+  padding: 3vh 5vw;
+}

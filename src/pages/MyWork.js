@@ -1,3 +1,9 @@
+import HeadingBar from './HeadingBar';
+
 export default function MyWork() {
-  return <div></div>;
+  return (
+    <div className='myWork side-wrapper'>
+      <HeadingBar />
+    </div>
+  );
 }

@@ -1,0 +1,13 @@
+.janis-logo {
+  z-index: 2;
+  position: absolute;
+  margin: 5vh 3vw;
+  width: 7vw;
+  animation: 15s spin infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

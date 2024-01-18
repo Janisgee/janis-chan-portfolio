@@ -1,0 +1,24 @@
+.headingBar {
+  display: flex;
+  align-items: top;
+  justify-content: end;
+}
+
+.menu {
+  list-style: none;
+  font-size: large;
+  display: flex;
+  gap: 60px;
+}
+.menu a {
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: black;
+}
+
+.menu a:hover {
+  color: #f20467;
+  text-decoration: #f20467 wavy overline;
+}
