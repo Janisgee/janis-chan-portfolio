@@ -7,8 +7,8 @@
   list-style: none;
   overflow: overlay;
   height: 65vh;
-  width: 38vw;
-  padding-left: 5vw;
+  /* width: 38vw; */
+  padding: 0 3vw;
   cursor: pointer;
   transform: rotate3d(6, 4, 4, -60deg);
   text-shadow: 0px 1px 1px #919191, 0px 2px 1px #919191, -1px 3px 1px #919191,
@@ -37,19 +37,19 @@
   color: #f20467;
 }
 
-.work-image {
+.work {
   width: 40vw;
+}
+
+.work-image {
+  width: 100%;
   border-radius: 15px;
   box-shadow: 8px 8px 10px 1px rgba(108, 108, 109, 0.6);
 }
 
 .content {
   display: flex;
-  gap: 9vw;
-}
-
-.content p {
-  width: 40vw;
+  gap: 7vw;
 }
 
 .click-for-more {
@@ -63,4 +63,8 @@
 .skill-image {
   height: 5vh;
   margin: 0 0.5vw;
+}
+
+.active {
+  color: #f20467;
 }
