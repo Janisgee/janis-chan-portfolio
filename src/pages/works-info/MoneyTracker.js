@@ -8,12 +8,20 @@ export default function MoneyTracker() {
     <div className='work fade-in-text'>
       <h1>Money Tracker Project</h1>
 
-      <img
-        className='work-image'
-        src={moneyTracker}
-        alt='Money Tracker'
-        title='Money Tracker'
-      />
+      <a
+        href='https://money-tracker-vp3w.onrender.com'
+        className='click-for-more'
+        target='_blank'
+        alt='More information'
+        rel='noreferrer'
+      >
+        <img
+          className='work-image'
+          src={moneyTracker}
+          alt='Money Tracker'
+          title='Money Tracker'
+        />
+      </a>
       <p>
         Using Node.js and React skills to create this money tracker, storing
         transactions and customer accounts in external server.
@@ -40,16 +48,6 @@ export default function MoneyTracker() {
           title='MongoDB'
         />
       </div>
-
-      <a
-        href='https://money-tracker-vp3w.onrender.com'
-        className='click-for-more'
-        target='_blank'
-        alt='More information'
-        rel='noreferrer'
-      >
-        <h4>Click for more!</h4>
-      </a>
     </div>
   );
 }

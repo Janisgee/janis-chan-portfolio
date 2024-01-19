@@ -4,14 +4,18 @@ import HeadingBar from './utilities/HeadingBar';
 import MoneyTracker from './works-info/MoneyTracker';
 import Worldwise from './works-info/Worldwise';
 import './MyWork.css';
+import Weather from './works-info/Weather';
+import ForkifyRecipe from './works-info/ForkifyRecipe';
+import PigGame from './works-info/PigGame';
 
 export default function MyWork() {
   const [clickedProjectId, setClickedProjectId] = useState('');
 
   function handleProjectClick(e) {
     e.preventDefault();
+    console.log(e.target);
     setClickedProjectId(e.target.dataset.id);
-    e.target.scrollTo({
+    e.target.parentElement.scrollTo({
       top: e.target.offsetTop,
       left: 0,
       behavior: 'smooth',
@@ -48,6 +52,9 @@ export default function MyWork() {
         </ul>
         {clickedProjectId === 'moneyTracker' ? <MoneyTracker /> : ''}
         {clickedProjectId === 'worldwise' ? <Worldwise /> : ''}
+        {clickedProjectId === 'weather' ? <Weather /> : ''}
+        {clickedProjectId === 'forkify' ? <ForkifyRecipe /> : ''}
+        {clickedProjectId === 'pigGame' ? <PigGame /> : ''}
       </div>
     </div>
   );

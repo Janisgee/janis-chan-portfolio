@@ -1,37 +1,35 @@
-import worldwise from '../../images/works/worldwise.png';
-import react from '../../images/skills/react.png';
+import pigGame from '../../images/works/pig-game.png';
 import javaScript from '../../images/skills/js.png';
 import css from '../../images/skills/css.png';
 import html from '../../images/skills/html.png';
 
-export default function Worldwise() {
+export default function PigGame() {
   return (
     <div className='work fade-in-text'>
-      <h1>Worldwise Project</h1>
+      <h1>Pig Game Project</h1>
 
       <a
-        href='https://worldwise-practice-01.netlify.app'
+        href='https://pig-dice-game01.netlify.app'
         className='click-for-more'
         target='_blank'
         alt='More information'
         rel='noreferrer'
       >
         <img
-          className='work-image'
-          src={worldwise}
-          alt='Worldwise'
-          title='Worldwise'
+          className='work-image pigGameImage'
+          src={pigGame}
+          alt='Pig Game'
+          title='Pig Game'
         />
       </a>
       <p>
-        Using React skills to create this worldwise application, through
-        open-source API javaScript library to display map information of the
-        world.
+        Use JavaScript, HTML and CSS to create this Pig Game. Each turn, a
+        player repeatedly rolls a die until either a 1 is rolled or the player
+        holds and scores the sum of the rolls.
       </p>
 
       <div className='work-skill'>
         <span>Tool used: </span>
-        <img className='skill-image' src={react} alt='React' title='React' />
         <img
           className='skill-image'
           src={javaScript}

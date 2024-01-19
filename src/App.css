@@ -10,7 +10,7 @@ body {
 }
 
 .side-wrapper {
-  padding: 3vh 5vw;
+  padding: 1vh 5vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
