@@ -1,15 +1,16 @@
-import weather from '../../images/works/weather-app.png';
+import dictionary from '../../images/works/dictionary-project.png';
+import react from '../../images/skills/react.png';
 import javaScript from '../../images/skills/js.png';
 import css from '../../images/skills/css.png';
 import html from '../../images/skills/html.png';
 
-export default function Weather() {
+export default function Dictionary() {
   return (
     <div className='work fade-in-text'>
-      <h1>Weather Project</h1>
+      <h1>Dictionary Project</h1>
 
       <a
-        href='https://worldweather-search.netlify.app'
+        href='https://project-dictionary-01.netlify.app/'
         className='click-for-more'
         target='_blank'
         alt='More information'
@@ -17,20 +18,20 @@ export default function Weather() {
       >
         <img
           className='work-image work-image-smaller'
-          src={weather}
-          alt='Weather'
-          title='Weather App'
+          src={dictionary}
+          alt='Dictionary'
+          title='Dictionary'
         />
       </a>
-
       <p>
-        Using React skills to create this weather application, through
-        open-source API javaScript library to display real-time weather
-        information of the world.
+        Use React, JavaScript, HTML and CSS to create this Dictionary App.
+        Through open-source api to get the words explanation, phonetic audio and
+        images.
       </p>
 
       <div className='work-skill'>
         <span>Tool used: </span>
+        <img className='skill-image' src={react} alt='React' title='React' />
         <img
           className='skill-image'
           src={javaScript}

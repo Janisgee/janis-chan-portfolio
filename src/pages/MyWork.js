@@ -7,6 +7,11 @@ import './MyWork.css';
 import Weather from './works-info/Weather';
 import ForkifyRecipe from './works-info/ForkifyRecipe';
 import PigGame from './works-info/PigGame';
+import TicTacToe from './works-info/TicTacToe';
+import Dictionary from './works-info/Dictionary';
+import ShoppingList from './works-info/ShoppingList';
+import MovieRating from './works-info/MovieRating';
+import ReactQuiz from './works-info/ReactQuiz';
 
 export default function MyWork() {
   const [clickedProjectId, setClickedProjectId] = useState('');
@@ -55,6 +60,11 @@ export default function MyWork() {
         {clickedProjectId === 'weather' ? <Weather /> : ''}
         {clickedProjectId === 'forkify' ? <ForkifyRecipe /> : ''}
         {clickedProjectId === 'pigGame' ? <PigGame /> : ''}
+        {clickedProjectId === 'ticTacToe' ? <TicTacToe /> : ''}
+        {clickedProjectId === 'dictionary' ? <Dictionary /> : ''}
+        {clickedProjectId === 'shoppingList' ? <ShoppingList /> : ''}
+        {clickedProjectId === 'movieRating' ? <MovieRating /> : ''}
+        {clickedProjectId === 'reactQuiz' ? <ReactQuiz /> : ''}
       </div>
     </div>
   );

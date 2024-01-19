@@ -16,7 +16,7 @@ export default function PigGame() {
         rel='noreferrer'
       >
         <img
-          className='work-image pigGameImage'
+          className='work-image work-image-smaller'
           src={pigGame}
           alt='Pig Game'
           title='Pig Game'

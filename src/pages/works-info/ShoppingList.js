@@ -1,36 +1,38 @@
-import weather from '../../images/works/weather-app.png';
+import shoppingList from '../../images/works/shopping-list.png';
+import react from '../../images/skills/react.png';
 import javaScript from '../../images/skills/js.png';
 import css from '../../images/skills/css.png';
 import html from '../../images/skills/html.png';
 
-export default function Weather() {
+export default function ShoppingList() {
   return (
     <div className='work fade-in-text'>
-      <h1>Weather Project</h1>
+      <h1>Shopping List Project</h1>
 
       <a
-        href='https://worldweather-search.netlify.app'
+        href='https://online-shopping-list.netlify.app/'
         className='click-for-more'
         target='_blank'
         alt='More information'
         rel='noreferrer'
       >
         <img
-          className='work-image work-image-smaller'
-          src={weather}
-          alt='Weather'
-          title='Weather App'
+          className='work-image'
+          src={shoppingList}
+          alt='Shopping List'
+          title='Shopping List'
         />
       </a>
-
       <p>
-        Using React skills to create this weather application, through
-        open-source API javaScript library to display real-time weather
-        information of the world.
+        Using ReactJS and computer local storage to create this first own
+        shopping list app for user to store their list information. Shopping
+        list app providing user a convenient and orgainized platform to create
+        manage shopping list. online.
       </p>
 
       <div className='work-skill'>
         <span>Tool used: </span>
+        <img className='skill-image' src={react} alt='React' title='React' />
         <img
           className='skill-image'
           src={javaScript}

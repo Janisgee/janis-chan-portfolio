@@ -1,36 +1,37 @@
-import weather from '../../images/works/weather-app.png';
+import reactQuiz from '../../images/works/react-quiz-app.png';
+import react from '../../images/skills/react.png';
 import javaScript from '../../images/skills/js.png';
 import css from '../../images/skills/css.png';
 import html from '../../images/skills/html.png';
 
-export default function Weather() {
+export default function ReactQuiz() {
   return (
     <div className='work fade-in-text'>
-      <h1>Weather Project</h1>
+      <h1>React Quiz Project</h1>
 
       <a
-        href='https://worldweather-search.netlify.app'
+        href='https://js-movie-rating.netlify.app/'
         className='click-for-more'
         target='_blank'
         alt='More information'
         rel='noreferrer'
       >
         <img
-          className='work-image work-image-smaller'
-          src={weather}
-          alt='Weather'
-          title='Weather App'
+          className='work-image '
+          src={reactQuiz}
+          alt='React Quiz App'
+          title='React Quiz App'
         />
       </a>
-
       <p>
-        Using React skills to create this weather application, through
-        open-source API javaScript library to display real-time weather
-        information of the world.
+        The react quiz app is a application to test user's react knowledge. By
+        using useReducer and useEffect hook to create this whole application.
+        Use local storage to store user's highest score.
       </p>
 
       <div className='work-skill'>
         <span>Tool used: </span>
+        <img className='skill-image' src={react} alt='React' title='React' />
         <img
           className='skill-image'
           src={javaScript}
