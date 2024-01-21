@@ -10,14 +10,14 @@ export default function ReactQuiz() {
       <h1>React Quiz Project</h1>
 
       <a
-        href='https://js-movie-rating.netlify.app/'
+        href='https://js-react-quiz.netlify.app/'
         className='click-for-more'
         target='_blank'
         alt='More information'
         rel='noreferrer'
       >
         <img
-          className='work-image '
+          className='work-image'
           src={reactQuiz}
           alt='React Quiz App'
           title='React Quiz App'
