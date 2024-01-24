@@ -12,9 +12,31 @@ import programming from '../images/about-janis/programming.png';
 import study from '../images/about-janis/study.png';
 import work from '../images/about-janis/work.png';
 
+import Hobby from '../pages/about-info/Hobby.js';
+import Personality from '../pages/about-info/Personality.js';
+import Study from './about-info/Study.js';
+import Work from './about-info/Work.js';
+import Programming from './about-info/Programming.js';
+import Design from './about-info/Design.js';
+import Australia from './about-info/Australia.js';
+import HongKong from './about-info/HongKong.js';
+
 export default function About() {
   const theta = Math.PI / 4.0;
   const [scrollTheta, setScrollTheta] = useState(0);
+  const [clickedAbout, setClickedAbout] = useState('');
+
+  function handleAboutClick(e) {
+    e.preventDefault();
+    console.log(e.target);
+    setClickedAbout(e.target.dataset.id);
+    console.log(e.target.dataset.id);
+    e.target.parentElement.scrollTo({
+      top: e.target.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 
   const cardImages = [
     { src: australia, name: 'Australia' },
@@ -89,37 +111,52 @@ export default function About() {
         alt='Janis Chan'
         title='Janis Chan'
       /> */}
-      <img
-        className='janis-image-two'
-        src={cartoonJanisTwo}
-        alt='Janis Chan'
-        title='Janis Chan'
-      />
-
-      <div
-        className='wheel'
-        style={{ transform: `translate(-50%, -50%) rotate(${scrollTheta}deg)` }}
-      >
-        {cardPositions.map((card, ind) => {
-          return (
-            <div
-              key={ind}
-              className='card'
-              style={{
-                top: card.y,
-                left: card.x,
-                transform: `translate(-50%, -50%) rotate(${-scrollTheta}deg)`,
-              }}
-            >
-              <img
-                src={card.image.src}
-                className='card'
-                alt={card.image.name}
-                title={card.image.name}
-              />
-            </div>
-          );
-        })}
+      <div className='aboutChoice'>
+        <div className='cardsGroup'>
+          <img
+            className='janis-image-two'
+            src={cartoonJanisTwo}
+            alt='Janis Chan'
+            title='Janis Chan'
+          />
+          <div
+            className='wheel'
+            style={{
+              transform: `translate(-50%, -50%) rotate(${scrollTheta}deg)`,
+            }}
+          >
+            {cardPositions.map((card, ind) => {
+              return (
+                <div
+                  key={ind}
+                  className='card'
+                  style={{
+                    top: card.y,
+                    left: card.x,
+                    transform: `translate(-50%, -50%) rotate(${-scrollTheta}deg)`,
+                  }}
+                  onClick={handleAboutClick}
+                >
+                  <img
+                    src={card.image.src}
+                    className='card'
+                    alt={card.image.name}
+                    title={card.image.name}
+                    data-id={card.image.name}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        {clickedAbout === 'Hobby' ? <Hobby /> : ''}
+        {clickedAbout === 'Personality' ? <Personality /> : ''}
+        {clickedAbout === 'Study' ? <Study /> : ''}
+        {clickedAbout === 'Previous Work' ? <Work /> : ''}
+        {clickedAbout === 'Programming' ? <Programming /> : ''}
+        {clickedAbout === 'Design' ? <Design /> : ''}
+        {clickedAbout === 'Australia' ? <Australia /> : ''}
+        {clickedAbout === 'Hong Kong' ? <HongKong /> : ''}
       </div>
     </div>
   );
