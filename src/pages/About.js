@@ -20,6 +20,7 @@ import Programming from './about-info/Programming.js';
 import Design from './about-info/Design.js';
 import Australia from './about-info/Australia.js';
 import HongKong from './about-info/HongKong.js';
+import Intro from './about-info/Intro.js';
 
 export default function About() {
   const theta = Math.PI / 4.0;
@@ -149,6 +150,7 @@ export default function About() {
             })}
           </div>
         </div>
+        {clickedAbout === '' ? <Intro /> : ''}
         {clickedAbout === 'Hobby' ? <Hobby /> : ''}
         {clickedAbout === 'Personality' ? <Personality /> : ''}
         {clickedAbout === 'Study' ? <Study /> : ''}

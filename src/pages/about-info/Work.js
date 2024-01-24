@@ -16,7 +16,7 @@ export default function Work() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `Before studying software, I work as a sales representative in food wholesaleing companys. \n Take care clients needs and wants.\n Provide good customer service skill to customers.`,
+            `Before studying software, I work as a sales representative in food wholesaleing companys. \n Take care clients needs and wants.\n Provide good customer service to customers.`,
             30000,
             '',
           ]}

@@ -12,6 +12,9 @@ export default function HeadingBar() {
           <NavLink to='/about'>About</NavLink>
         </li>
         <li>
+          <NavLink to='/coding-skill'>Coding Skill</NavLink>
+        </li>
+        <li>
           <NavLink to='/my-work'>My Work</NavLink>
         </li>
         <li>
