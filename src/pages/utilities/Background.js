@@ -13,7 +13,6 @@ export default function Background() {
     tracker.style.top = `${e.clientY}px`;
     tracker.style.opacity = 1;
 
-    console.log(e);
     /*Adjust the clip-path*/
     backgroundWord.style.setProperty('--x', e.clientX - position.top + 'px');
     backgroundWord.style.setProperty('--y', e.clientY - position.left + 'px');
@@ -21,7 +20,7 @@ export default function Background() {
   document.addEventListener('mousemove', moveElements);
   return (
     <div>
-      <div class='tracker'></div>
+      <div className='tracker'></div>
       <div
         className='containerbackground  to-right animation-common'
         style={{ '--delay': '0s' }}
@@ -34,35 +33,35 @@ export default function Background() {
       <img
         src={shadow}
         alt=''
-        class='shadow animation-common sm-hidden'
+        className='shadow animation-common sm-hidden'
         // data-offset='.02'
         style={{ '--delay': '0.35s' }}
       />
       <img
         src={shadow}
         alt=''
-        class='shadow shadow-md animation-common sm-hidden'
+        className='shadow shadow-md animation-common sm-hidden'
         // data-offset='.02'
         style={{ '--delay': '0.35s' }}
       />
       <img
         src={bubble}
         alt=''
-        class='bubble animation-common sm-hidden'
+        className='bubble animation-common sm-hidden'
         // data-offset='.05'
         style={{ '--delay': '0.5s' }}
       />
       <img
         src={bubble}
         alt=''
-        class='bubble bubble-md animation-common sm-hidden'
+        className='bubble bubble-md animation-common sm-hidden'
         // data-offset='.025'
         style={{ '--delay': '0.25s' }}
       />
       <img
         src={bubble}
         alt=''
-        class='bubble bubble-lg animation-common sm-hidden'
+        className='bubble bubble-lg animation-common sm-hidden'
         // data-offset='.02'
         style={{ '--delay': '0.35s' }}
       />
