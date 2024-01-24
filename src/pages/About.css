@@ -46,6 +46,7 @@
 
 .aboutMessage {
   width: 40vw;
+  user-select: none;
 }
 
 .intoName {

@@ -13,6 +13,10 @@ body {
   padding: 1vh 5vw;
 }
 
+.displayFlex {
+  display: flex;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animation-common {
     animation-duration: 1s;
@@ -38,13 +42,18 @@ body {
     transform: rotate3d(6, 4, 4, -60deg);
   }
 
-  .to-right {
+  /* .to-right {
     display: block;
     opacity: 0;
-  }
+  } */
 
   .to-right {
     animation-name: toRight;
+  }
+
+  .to-left {
+    animation: toLeft 5s;
+    animation-iteration-count: 1;
   }
 
   .scaleChange {
@@ -65,6 +74,10 @@ body {
     -moz-animation: fadeOutText 5s;
     -o-animation: fadeOutText 5s;
     -ms-animation: fadeOutText 5s;
+  }
+
+  .hidden {
+    display: none;
   }
 
   /* Keyframes */
@@ -95,6 +108,17 @@ body {
     to {
       opacity: 1;
       transform: none, rotate3d(6, 4, 4, -60deg);
+    }
+  }
+  @keyframes toLeft {
+    from {
+      opacity: 1;
+      transform: none, rotate3d(6, 4, 4, -60deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(-150%);
     }
   }
   @keyframes fadeIn {
