@@ -13,10 +13,6 @@ body {
   padding: 1vh 5vw;
 }
 
-.displayFlex {
-  display: flex;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .animation-common {
     animation-duration: 1s;
@@ -56,6 +52,11 @@ body {
     animation-iteration-count: 1;
   }
 
+  .right-to-left {
+    animation: rightToLeft 2s;
+    animation-iteration-count: 1;
+  }
+
   .scaleChange {
     animation-name: scaleChange;
   }
@@ -74,6 +75,11 @@ body {
     -moz-animation: fadeOutText 5s;
     -o-animation: fadeOutText 5s;
     -ms-animation: fadeOutText 5s;
+  }
+
+  .displayFlex {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .hidden {
@@ -119,6 +125,18 @@ body {
     to {
       opacity: 1;
       transform: translateX(-150%);
+    }
+  }
+
+  @keyframes rightToLeft {
+    from {
+      opacity: 1;
+      transform: translateX(80%);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
     }
   }
   @keyframes fadeIn {

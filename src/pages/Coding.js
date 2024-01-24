@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import './Coding.css';
 import HeadingBar from './utilities/HeadingBar.js';
 
 export default function Coding() {
+  const [enterClicked, setEnterClicked] = useState(false);
+
   function handleEnterClick(e) {
     e.preventDefault();
 
@@ -10,7 +13,8 @@ export default function Coding() {
     setTimeout(() => {
       console.log('Delayed for 4 second.');
       e.target.parentElement.classList.add('hidden');
-    }, '4000');
+      setEnterClicked(true);
+    }, '2500');
   }
   return (
     <div className='coding side-wrapper'>
@@ -21,6 +25,30 @@ export default function Coding() {
           ENTER►
         </div>
       </div>
+      {enterClicked ? (
+        <div className='codingSkills right-to-left'>
+          <div className='displayFlex skill '>
+            <h1>
+              Skills
+              <br />
+              in <br />
+              Coding
+            </h1>
+            <div className='displayFlex'>
+              <div>
+                <h3>Front-end Skills</h3>
+                <h3> Html, Css, JS</h3>
+              </div>
+              <div>
+                <h3>Back-end Skills</h3>
+                <h3> Html, Css, JS</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 }
