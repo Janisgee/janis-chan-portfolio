@@ -34,6 +34,9 @@
 } */
 
 .skill {
+  justify-content: flex-start;
+  gap: 8vw;
+  padding: 0vh 5vw;
 }
 
 .codingSkills h1 {
