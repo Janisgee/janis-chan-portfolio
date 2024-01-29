@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Coding.css';
 import HeadingBar from './utilities/HeadingBar.js';
+import FlippingCard from './utilities/FlippingCard.js';
 
 export default function Coding() {
   const [enterClicked, setEnterClicked] = useState(false);
@@ -34,16 +35,7 @@ export default function Coding() {
               in <br />
               Coding
             </h1>
-            <div className='displayFlex'>
-              <div>
-                <h3>Front-end Skills</h3>
-                <h3> Html, Css, JS</h3>
-              </div>
-              <div>
-                <h3>Back-end Skills</h3>
-                <h3> Html, Css, JS</h3>
-              </div>
-            </div>
+            <FlippingCard />
           </div>
         </div>
       ) : (
