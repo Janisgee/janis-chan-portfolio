@@ -25,6 +25,15 @@ export default function Navbar() {
               <li>
                 <NavLink
                   onClick={() => {
+                    window.location.href = '/coding-skill';
+                  }}
+                >
+                  Coding Skill
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  onClick={() => {
                     window.location.href = '/my-work';
                   }}
                 >
