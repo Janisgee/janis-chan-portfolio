@@ -9,6 +9,7 @@
 .section h3 {
   padding-top: 4vh;
   text-align: center;
+  user-select: none;
 }
 
 [type='checkbox']:checked,
@@ -86,6 +87,7 @@
   transform-style: preserve-3d;
   perspective: 1000px;
   margin-top: 14px;
+  user-select: none;
 }
 .card-3d-wrapper {
   width: 100%;
@@ -93,6 +95,7 @@
   position: absolute;
   top: 0;
   left: 0;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: transform 700ms 400ms ease-out;
