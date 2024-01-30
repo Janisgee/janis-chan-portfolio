@@ -13,6 +13,11 @@ body {
   padding: 1vh 5vw;
 }
 
+.activeButton {
+  color: #f20467;
+  font-weight: bold;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animation-common {
     animation-duration: 1s;

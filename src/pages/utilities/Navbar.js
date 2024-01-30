@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
@@ -11,13 +12,20 @@ export default function Navbar() {
           <nav>
             <ul className='navBar'>
               <li>
-                <NavLink to='/'>Home</NavLink>
+                <NavLink
+                  to='/'
+                  data-id='home'
+                  className={({ isActive }) => (isActive ? 'activeButton' : '')}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink
                   onClick={() => {
                     window.location.href = '/about';
                   }}
+                  data-id='about'
                 >
                   About
                 </NavLink>
@@ -27,6 +35,7 @@ export default function Navbar() {
                   onClick={() => {
                     window.location.href = '/coding-skill';
                   }}
+                  data-id='coding-skill'
                 >
                   Coding Skill
                 </NavLink>
@@ -36,6 +45,7 @@ export default function Navbar() {
                   onClick={() => {
                     window.location.href = '/my-work';
                   }}
+                  data-id='my-work'
                 >
                   My Work
                 </NavLink>
@@ -45,6 +55,7 @@ export default function Navbar() {
                   onClick={() => {
                     window.location.href = '/contact';
                   }}
+                  data-id='contact'
                 >
                   Contact
                 </NavLink>
