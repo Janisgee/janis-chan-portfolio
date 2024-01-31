@@ -1,4 +1,6 @@
 import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 import HeadingBar from './utilities/HeadingBar';
 // import backgroundMap from '../images/perth-map.png';
@@ -43,14 +45,38 @@ export default function Contact() {
           <h1>Contact Me!</h1>
           {/* <h2>Want to say "Hi!" ?</h2> */}
           <h2 className='messageBeforeSent'>
-            Get in touch with me via social media or email.
+            Get in touch with me via LinkedIn or email.
           </h2>
-          <img
-            className='contact-janis'
-            src={contactJanis}
-            alt='Janis Chan'
-            title='Janis Chan'
-          />
+          <div className='displayFlex'>
+            <img
+              className='contact-janis'
+              src={contactJanis}
+              alt='Janis Chan'
+              title='Janis Chan'
+            />
+            <div>
+              <ul>
+                <li>
+                  <a
+                    href='https://www.linkedin.com/in/jc-janis-chan'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} size='xl' />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='https://github.com/Janisgee/janis-chan-portfolio'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <FontAwesomeIcon icon={faSquareGithub} size='xl' />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div className='contactForm-wrapper'>
           <div className='paper-plane'>
@@ -62,8 +88,16 @@ export default function Contact() {
             />
           </div>
           <form action='' method='get' className='form-container'>
+            <div className='onstart'>
+              <Lottie
+                className='lottie-form'
+                options={emailFormOption}
+                height={140}
+                width={90}
+              />
+            </div>
             <h1>Wish to email me?</h1>
-            <div className='contact-form-structure '>
+            <div className='contact-form-structure'>
               <div>
                 <div>
                   <label htmlFor='name' className='form-label'>
@@ -75,6 +109,7 @@ export default function Contact() {
                     id='name'
                     className='form-block'
                     required
+                    autoFocus
                   />
                 </div>
                 <div>
@@ -90,20 +125,18 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              <div className='onstart'>
-                <Lottie
-                  className='lottie-form'
-                  options={emailFormOption}
-                  height={140}
-                  width={90}
-                />
-              </div>
+              {/* <Lottie
+                className='lottie-form'
+                options={emailFormOption}
+                height={140}
+                width={90}
+              /> */}
             </div>
             <div>
               <label htmlFor='message' className='form-label'>
                 Message
               </label>
-              <input
+              <textarea
                 type='text'
                 name='message'
                 id='message'

@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './HeadingBar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function HeadingBar() {
   return (
@@ -49,6 +51,24 @@ export default function HeadingBar() {
           >
             Contact
           </NavLink>
+        </li>
+        <li>
+          <a
+            href='https://www.linkedin.com/in/jc-janis-chan'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FontAwesomeIcon icon={faLinkedin} size='xl' />
+          </a>
+        </li>
+        <li>
+          <a
+            href='https://github.com/Janisgee/janis-chan-portfolio'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FontAwesomeIcon icon={faSquareGithub} size='xl' />
+          </a>
         </li>
       </ul>
     </nav>

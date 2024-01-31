@@ -64,6 +64,14 @@
   pointer-events: none;
 }
 
+.form-container input,
+textarea {
+  font-family: 'Tektur', sans-serif;
+  border-radius: 10px;
+  border: 1.5px solid rgb(219, 219, 219);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
 .form-label {
   display: block;
   font-size: 1.125em;
@@ -77,14 +85,14 @@
   border: 1px solid gray;
   margin-bottom: 1em;
   border-radius: 5px;
-  font-family: 'Tektur', sans-serif;
 }
 
 .form-message {
-  width: 33vw;
-  height: 20vh;
-  border-radius: 5px;
-  font-family: 'Tektur', sans-serif;
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  height: 90px;
+  max-height: 110px;
 }
 
 .contactForm-wrapper button {
@@ -100,4 +108,10 @@
 .contactForm-wrapper button:hover {
   cursor: pointer;
   background-color: #f20467;
+}
+
+.onstart {
+  position: absolute;
+  top: -66px;
+  right: 14px;
 }
