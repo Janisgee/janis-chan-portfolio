@@ -66,8 +66,7 @@ export default function Navbar() {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <FontAwesomeIcon icon={faLinkedin} size='xl' />
-                  Linkedin
+                  <FontAwesomeIcon icon={faLinkedin} size='xl' /> Linkedin
                 </a>
               </li>
               <li>

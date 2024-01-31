@@ -1,0 +1,103 @@
+.contact {
+  justify-content: flex-start;
+  /* clear: right; */
+}
+
+.contactForm-wrapper {
+  height: 83vh;
+  width: 50%;
+  /* display: grid; */
+  /* place-content: center; */
+}
+
+.contactForm-wrapper .messageBeforeSent {
+  margin-top: 6vh;
+}
+
+.contact-me {
+  padding-top: 10vh;
+  width: 30%;
+}
+
+.contact-form-structure {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-janis {
+  height: 60vh;
+  opacity: 0.4;
+}
+
+.form-container {
+  margin-top: 5vh;
+  padding: 3vh 6vw;
+  max-width: 70vw;
+  background-color: white;
+  box-shadow: 20px 20px 40px rgb(153, 152, 152);
+  border-radius: 1em;
+  position: relative;
+}
+
+.contactForm-wrapper h1 {
+  margin: 0.5em 0 0.5em;
+}
+
+.contactForm-wrapper .success-message {
+  font-size: 3em;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 8em;
+}
+
+.paper-plane {
+  position: absolute;
+  z-index: -1;
+}
+
+.lottie-plane {
+  width: 100%;
+  height: 100bh;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.form-label {
+  display: block;
+  font-size: 1.125em;
+  margin-bottom: 0.3em;
+}
+
+.form-block {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  border: 1px solid gray;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  font-family: 'Tektur', sans-serif;
+}
+
+.form-message {
+  width: 33vw;
+  height: 20vh;
+  border-radius: 5px;
+  font-family: 'Tektur', sans-serif;
+}
+
+.contactForm-wrapper button {
+  display: block;
+  background-color: pink;
+  color: white;
+  border-radius: 5px;
+  padding: 0.8em;
+  margin: 3vh auto 1vh;
+  font-family: 'Tektur', sans-serif;
+}
+
+.contactForm-wrapper button:hover {
+  cursor: pointer;
+  background-color: #f20467;
+}
