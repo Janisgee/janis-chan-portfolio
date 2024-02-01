@@ -14,8 +14,8 @@ import animationDataEmailFail from '../lotties/email-sent-fail.json';
 import contactJanis from '../images/contact-janis.png';
 
 export default function Contact() {
-  const [emailSent, setEmailSent] = useState(true);
-  const [sentCondition, setSentCondition] = useState('success');
+  const [emailSent, setEmailSent] = useState(false);
+  const [sentCondition, setSentCondition] = useState('');
   const form = useRef();
 
   function handleSendEmail(e) {
@@ -83,17 +83,11 @@ export default function Contact() {
   return (
     <div className='contact side-wrapper background-map'>
       <HeadingBar />
-      {/* <img
-        className='background-map'
-        src={backgroundMap}
-        alt='Perth Map'
-        title='Perth Map'
-      /> */}
 
       <div className='displayFlex contact'>
         <div className='contact-me'>
           <h1>Contact Me!</h1>
-          {/* <h2>Want to say "Hi!" ?</h2> */}
+
           <h2 className='messageBeforeSent'>
             Get in touch with me via LinkedIn or email.
           </h2>
