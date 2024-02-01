@@ -89,29 +89,10 @@ export default function About() {
     return () => cancelAnimationFrame(rafId);
   }, []);
 
-  // useEffect(() => {
-  //   const handleWheel = (event) => {
-  //     console.log(event);
-  //     setScrollTheta((prevTheta) => prevTheta + event.deltaY);
-  //   };
-
-  //   document.addEventListener('wheel', handleWheel);
-
-  //   return () => {
-  //     document.removeEventListener('wheel', handleWheel);
-  //   };
-  // }, []);
-
   return (
     <div className='about side-wrapper'>
       <HeadingBar />
-      {/* 
-      <img
-        className='janis-image'
-        src={cartoonJanis}
-        alt='Janis Chan'
-        title='Janis Chan'
-      /> */}
+
       <div className='aboutChoice'>
         <div className='cardsGroup'>
           <img
@@ -150,15 +131,24 @@ export default function About() {
             })}
           </div>
         </div>
-        {clickedAbout === '' ? <Intro /> : ''}
-        {clickedAbout === 'Hobby' ? <Hobby /> : ''}
-        {clickedAbout === 'Personality' ? <Personality /> : ''}
-        {clickedAbout === 'Study' ? <Study /> : ''}
-        {clickedAbout === 'Previous Work' ? <Work /> : ''}
-        {clickedAbout === 'Programming' ? <Programming /> : ''}
-        {clickedAbout === 'Design' ? <Design /> : ''}
-        {clickedAbout === 'Australia' ? <Australia /> : ''}
-        {clickedAbout === 'Hong Kong' ? <HongKong /> : ''}
+        {clickedAbout === '' && <Intro />}
+        {clickedAbout === 'Hobby' && <Hobby />}
+        {clickedAbout === 'Personality' && <Personality />}
+        {clickedAbout === 'Study' && <Study />}
+        {clickedAbout === 'Previous Work' && <Work />}
+        {clickedAbout === 'Programming' && <Programming />}
+        {clickedAbout === 'Design' && <Design />}
+        {clickedAbout === 'Australia' && <Australia />}
+        {clickedAbout === 'Hong Kong' && <HongKong />}
+        <a
+          href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
+          target='_blank'
+          alt='Resume'
+          rel='noreferrer'
+          className='resume'
+        >
+          📃Resume
+        </a>
       </div>
     </div>
   );

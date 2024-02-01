@@ -67,3 +67,19 @@
   height: 17vh;
   border-radius: 10px;
 }
+
+.resume {
+  position: absolute;
+  color: black;
+  left: 83%;
+  bottom: 10%;
+  font-size: 1.3em;
+  text-decoration: none;
+  background-color: lightgrey;
+  padding: 5px 14px;
+  border-radius: 15px;
+}
+
+.resume:hover {
+  color: #f20467;
+}
