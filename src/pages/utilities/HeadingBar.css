@@ -1,7 +1,7 @@
 .headingBar {
   display: flex;
   align-items: top;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .menu {
