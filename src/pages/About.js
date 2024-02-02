@@ -39,18 +39,18 @@ export default function About() {
     });
   }
 
-  const cardImages = [
-    { src: australia, name: 'Australia' },
-    { src: hongKong, name: 'Hong Kong' },
-    { src: hobby, name: 'Hobby' },
-    { src: personality, name: 'Personality' },
-    { src: study, name: 'Study' },
-    { src: work, name: 'Previous Work' },
-    { src: programming, name: 'Programming' },
-    { src: design, name: 'Design' },
-  ];
-
   const cardPositions = useMemo(() => {
+    const cardImages = [
+      { src: australia, name: 'Australia' },
+      { src: hongKong, name: 'Hong Kong' },
+      { src: hobby, name: 'Hobby' },
+      { src: personality, name: 'Personality' },
+      { src: study, name: 'Study' },
+      { src: work, name: 'Previous Work' },
+      { src: programming, name: 'Programming' },
+      { src: design, name: 'Design' },
+    ];
+
     let new_theta = 0.0;
     let new_x = 0.0;
     let new_y = 0.0;
@@ -69,7 +69,7 @@ export default function About() {
       new_y = -1 * Math.sin(new_theta) * wheel_radius;
       return { x: `${center.x + new_x}px`, y: `${center.y + new_y}px`, image };
     });
-  }, []);
+  }, [theta]);
 
   useEffect(() => {
     let stop = false;
