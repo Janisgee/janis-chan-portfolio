@@ -3,7 +3,7 @@ import Navbar from './utilities/Navbar.js';
 
 export default function Home() {
   return (
-    <div className='container'>
+    <div className='homeContainer'>
       <Background />
       <Navbar />
     </div>

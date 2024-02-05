@@ -6,7 +6,7 @@
   .containerbackground {
     position: absolute;
     z-index: -1;
-    top: -9%;
+    top: 0%;
     left: 10%;
     transform: rotate3d(6, 4, 4, -60deg);
     text-transform: uppercase;

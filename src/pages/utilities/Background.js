@@ -19,7 +19,7 @@ export default function Background() {
   };
   document.addEventListener('mousemove', moveElements);
   return (
-    <div>
+    <div className='background'>
       <div className='tracker'></div>
       <div
         className='containerbackground  to-right animation-common'

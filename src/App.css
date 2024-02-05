@@ -225,3 +225,164 @@ body {
     }
   }
 }
+
+@media only screen and (min-width: 1920px) {
+  /* Background */
+  .rootLayout .janis-logo {
+    width: 5vw;
+    left: 16vw;
+  }
+  .background .containerbackground {
+    top: 7%;
+    left: 24%;
+    font-size: 15em;
+  }
+
+  .background .bubble {
+    left: 26vw;
+  }
+  .background .bubble-md {
+    width: 30vw;
+    left: 68vw;
+  }
+
+  .background .bubble-lg {
+    top: 54vh;
+    left: 46vw;
+    width: 37vw;
+  }
+
+  .background .shadow {
+    left: 33vw;
+  }
+  .background .shadow-md {
+    left: 65vw;
+    top: 37vh;
+  }
+
+  .main-wrapper .navBar {
+    left: 18%;
+    font-size: 2em;
+  }
+
+  /* About */
+
+  .side-wrapper {
+    padding: 9vh 20vw;
+  }
+
+  .side-wrapper .headingBar a {
+    font-size: 1.3em;
+  }
+
+  .about .aboutChoice {
+    gap: 9vw;
+  }
+
+  .about .intoName {
+    padding-top: 14vh;
+  }
+
+  .aboutChoice .cardsGroup .janis-image-two {
+    margin-top: 27.5vh;
+    margin-left: 11.2vw;
+  }
+
+  .aboutChoice .card {
+    left: 205%;
+  }
+
+  .aboutChoice .aboutMessage {
+    width: 27vw;
+    margin-top: 10vh;
+  }
+
+  .aboutChoice .aboutImage img {
+    height: 12vh;
+  }
+
+  .resume {
+    left: 72%;
+    bottom: 30%;
+  }
+
+  /* Coding Skill */
+
+  .coding .codingbackground {
+    margin-top: 22vh;
+  }
+  .coding .enterSign {
+    padding-left: 53vw;
+  }
+
+  .skill {
+    margin-top: 10vh;
+    gap: 5vw;
+  }
+
+  .coding .codingSkills h1 {
+    font-size: 6em;
+  }
+
+  .codingSkills .section {
+    padding-top: 0vh;
+    width: 48%;
+  }
+
+  .section .card-3d-wrap {
+    height: 40%;
+  }
+
+  .section .skill-logo {
+    height: 6vh;
+  }
+
+  .section .skill-label .skill-logo {
+    height: 5vh;
+  }
+
+  .section h3 {
+    font-size: 2em;
+  }
+
+  .skill-wrap h4 {
+    font-size: 1.5em;
+  }
+
+  .tech-logo {
+    height: 7vh;
+    margin: 0 0.5vw;
+  }
+  .card-front {
+    width: 55%;
+    height: 80%;
+  }
+  /* My Work */
+  .myWork .content {
+    gap: 8vw;
+  }
+  .content .projects {
+    line-height: 9vh;
+    width: 25vw;
+  }
+  .work p {
+    font-size: 1.3em;
+  }
+
+  /* Contact */
+  .contact {
+    justify-content: space-evenly;
+  }
+  .contact .contactForm-wrapper .message-result {
+    width: 30%;
+  }
+
+  .contact .contact-icon {
+    right: 19vw;
+    font-size: 2em;
+  }
+
+  .contact .paper-plane {
+    right: 39vw;
+  }
+}
