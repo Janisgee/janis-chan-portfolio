@@ -65,6 +65,21 @@ export default function Background() {
         // data-offset='.02'
         style={{ '--delay': '0.35s' }}
       />
+
+      <img
+        src={bubble}
+        alt=''
+        className='mobile-bubble animation-common lg-hidden'
+        // data-offset='.02'
+        style={{ '--delay': '0.35s' }}
+      />
+      <img
+        src={bubble}
+        alt=''
+        className='mobile-bubble mobile-bubble-md animation-common lg-hidden'
+        // data-offset='.02'
+        style={{ '--delay': '0.35s' }}
+      />
     </div>
   );
 }

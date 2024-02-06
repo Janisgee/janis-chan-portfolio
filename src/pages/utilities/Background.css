@@ -96,18 +96,4 @@
     width: 20vw;
     transform-origin: top;
   }
-  /* Cursor tracker */
-  /* .tracker {
-    position: fixed;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 6px solid #141414;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition: top 0.075s, left 0.075s, opacity 0.5s;
-    opacity: 0;
-  } */
 }

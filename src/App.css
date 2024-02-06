@@ -18,10 +18,8 @@ body {
   font-weight: bold;
 }
 
-.display-none {
-  display: none;
-}
-
+.display-none,
+.navBar-logo .janis-logo,
 .lg-hidden {
   display: none;
 }
@@ -39,6 +37,14 @@ body {
     animation-name: scaleIn, bounce;
     animation-duration: 10s, 5s;
     animation-iteration-count: 1, infinite;
+    transition: translate 4s;
+  }
+
+  .mobile-bubble {
+    /* scale: 0; */
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
     transition: translate 4s;
   }
 
@@ -434,7 +440,7 @@ body {
     position: absolute;
     z-index: -1;
     top: 40%;
-    left: 15vw;
+    left: 11vw;
     font-size: 5em;
     text-align: center;
     text-transform: uppercase;
@@ -527,11 +533,31 @@ body {
     color: #f20467;
   }
 
-  .bubble {
+  /* .bubble {
     z-index: 3;
-  }
+  } */
 
   .sm-hidden {
     display: none;
+  }
+
+  .mobile-bubble {
+    position: absolute;
+    display: unset;
+    width: 73vw;
+    bottom: 1%;
+    right: 48%;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .mobile-bubble-md {
+    position: absolute;
+    display: unset;
+    width: 112vw;
+    bottom: 23%;
+    right: -34%;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 }

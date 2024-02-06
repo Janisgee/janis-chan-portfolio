@@ -24,7 +24,7 @@ export default function Navbar() {
                   : 'displayFlex navbarTop'
               }
             >
-              <div className='navBar-logo lg-hidden'>
+              <div className='navBar-logo '>
                 <Logo />
               </div>
               <div className='bars' onClick={handleNavBarClick}>
