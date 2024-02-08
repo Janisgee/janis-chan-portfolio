@@ -12,6 +12,7 @@ import Dictionary from './works-info/Dictionary';
 import ShoppingList from './works-info/ShoppingList';
 import MovieRating from './works-info/MovieRating';
 import ReactQuiz from './works-info/ReactQuiz';
+import Navbar from './utilities/Navbar';
 
 export default function MyWork() {
   const [clickedProjectId, setClickedProjectId] = useState('');
@@ -36,6 +37,7 @@ export default function MyWork() {
 
   return (
     <div className='myWork side-wrapper'>
+      <Navbar />
       <HeadingBar />
 
       <div className='content'>

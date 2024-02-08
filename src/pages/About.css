@@ -83,3 +83,156 @@
 .resume:hover {
   color: #f20467;
 }
+@media only screen and (min-width: 1920px) {
+  /* About */
+
+  .side-wrapper {
+    padding: 9vh 20vw;
+  }
+
+  .side-wrapper .headingBar a {
+    font-size: 1.3em;
+  }
+
+  .about .aboutChoice {
+    gap: 9vw;
+  }
+
+  .about .intoName {
+    padding-top: 14vh;
+  }
+
+  .aboutChoice .cardsGroup .janis-image-two {
+    margin-top: 27.5vh;
+    margin-left: 11.2vw;
+  }
+
+  .aboutChoice .card {
+    left: 205%;
+  }
+
+  .aboutChoice .aboutMessage {
+    width: 27vw;
+    margin-top: 10vh;
+  }
+
+  .aboutChoice .aboutImage img {
+    height: 12vh;
+  }
+
+  .resume {
+    left: 72%;
+    bottom: 30%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  /* About */
+  .about-desktop {
+    display: none;
+  }
+
+  .about-mobile {
+    height: 100%;
+    display: grid;
+    padding: 0 10%;
+    grid-template-rows: 30% 10% 60%;
+  }
+  .mobile-janisImage .janis-image-two {
+    display: block;
+    width: 16vh;
+    margin: 3vh auto 0;
+    border: 0.3rem solid white;
+  }
+  .mobile-intro {
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+
+  .mobile-aboutGroup {
+    width: 100%;
+    display: grid;
+    /* flex-wrap: wrap;
+    row-gap: 2vw;
+    column-gap: 3vh; */
+    grid-template-rows: 25% 5% 25% 5% 25% 5%;
+    grid-template-columns: 30% 30% 30%;
+    row-gap: 5%;
+    column-gap: 3.3%;
+  }
+
+  .mobile-card {
+    justify-content: space-around;
+    width: 100%;
+
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  .mobile-tag {
+    font-size: 0.8em;
+    justify-content: space-around;
+    width: 100%;
+    /* height: 3vh; */
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .mobile-aboutGroup .card-resume {
+    order: 1;
+  }
+  .mobile-aboutGroup .card-australia {
+    order: 2;
+  }
+
+  .mobile-aboutGroup .card-hongKong {
+    order: 3;
+  }
+
+  .mobile-aboutGroup .tag-Resume {
+    order: 4;
+  }
+  .mobile-aboutGroup .tag-australia {
+    order: 5;
+  }
+  .mobile-aboutGroup .tag-hongKong {
+    order: 6;
+  }
+  .mobile-aboutGroup .card-work {
+    order: 7;
+  }
+  .mobile-aboutGroup .card-personality {
+    order: 8;
+  }
+  .mobile-aboutGroup .card-study {
+    order: 9;
+  }
+  .mobile-aboutGroup .tag-work {
+    order: 10;
+  }
+  .mobile-aboutGroup .tag-personality {
+    order: 11;
+  }
+  .mobile-aboutGroup .tag-study {
+    order: 12;
+  }
+  .mobile-aboutGroup .card-program {
+    order: 13;
+  }
+  .mobile-aboutGroup .card-hobby {
+    order: 14;
+  }
+  .mobile-aboutGroup .card-design {
+    order: 15;
+  }
+  .mobile-aboutGroup .tag-program {
+    order: 16;
+  }
+  .mobile-aboutGroup .tag-hobby {
+    order: 17;
+  }
+  .mobile-aboutGroup .tag-design {
+    order: 18;
+  }
+}

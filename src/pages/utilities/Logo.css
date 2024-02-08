@@ -1,9 +1,4 @@
 .janis-logo {
-  position: absolute;
-  z-index: 2;
-  margin: 5vh 3vw;
-  top: 2%;
-  width: 7vw;
   animation: 15s spin infinite linear;
 }
 

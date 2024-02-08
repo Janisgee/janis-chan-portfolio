@@ -1,3 +1,10 @@
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route,
+} from 'react-router-dom';
+
 import './App.css';
 
 import RootLayout from './pages/RootLayout.js';
@@ -7,13 +14,6 @@ import About from './pages/About.js';
 import Coding from './pages/Coding.js';
 import MyWork from './pages/MyWork.js';
 import Contact from './pages/Contact.js';
-
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-} from 'react-router-dom';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

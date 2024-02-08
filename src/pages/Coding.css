@@ -59,3 +59,57 @@
   display: inline-block;
   text-align: center;
 }
+
+@media only screen and (min-width: 1920px) {
+  /* Coding Skill */
+
+  .coding .codingbackground {
+    margin-top: 22vh;
+  }
+  .coding .enterSign {
+    padding-left: 53vw;
+  }
+
+  .skill {
+    margin-top: 10vh;
+    gap: 5vw;
+  }
+
+  .coding .codingSkills h1 {
+    font-size: 6em;
+  }
+
+  .codingSkills .section {
+    padding-top: 0vh;
+    width: 48%;
+  }
+
+  .section .card-3d-wrap {
+    height: 40%;
+  }
+
+  .section .skill-logo {
+    height: 6vh;
+  }
+
+  .section .skill-label .skill-logo {
+    height: 5vh;
+  }
+
+  .section h3 {
+    font-size: 2em;
+  }
+
+  .skill-wrap h4 {
+    font-size: 1.5em;
+  }
+
+  .tech-logo {
+    height: 7vh;
+    margin: 0 0.5vw;
+  }
+  .card-front {
+    width: 55%;
+    height: 80%;
+  }
+}

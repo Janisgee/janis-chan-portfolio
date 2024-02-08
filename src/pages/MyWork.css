@@ -77,3 +77,17 @@
 .active {
   color: #f20467;
 }
+
+@media only screen and (min-width: 1920px) {
+  /* My Work */
+  .myWork .content {
+    gap: 8vw;
+  }
+  .content .projects {
+    line-height: 9vh;
+    width: 25vw;
+  }
+  .work p {
+    font-size: 1.3em;
+  }
+}

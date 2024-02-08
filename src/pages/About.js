@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './About.css';
+import { TypeAnimation } from 'react-type-animation';
 import HeadingBar from './utilities/HeadingBar.js';
 // import cartoonJanis from '../images/cartoon-janis.png';
 import cartoonJanisTwo from '../images/cartoon-janis-two.jpg';
@@ -11,6 +12,7 @@ import personality from '../images/about-janis/personality.png';
 import programming from '../images/about-janis/programming.png';
 import study from '../images/about-janis/study.png';
 import work from '../images/about-janis/work.png';
+import resume from '../images/about-janis/resume.png';
 
 import Hobby from '../pages/about-info/Hobby.js';
 import Personality from '../pages/about-info/Personality.js';
@@ -21,8 +23,9 @@ import Design from './about-info/Design.js';
 import Australia from './about-info/Australia.js';
 import HongKong from './about-info/HongKong.js';
 import Intro from './about-info/Intro.js';
+import Navbar from './utilities/Navbar.js';
 
-export default function About() {
+const AboutDesktop = () => {
   const theta = Math.PI / 4.0;
   const [scrollTheta, setScrollTheta] = useState(0);
   const [clickedAbout, setClickedAbout] = useState('');
@@ -90,9 +93,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className='about side-wrapper'>
-      <HeadingBar />
-
+    <div className='about-desktop'>
       <div className='aboutChoice'>
         <div className='cardsGroup'>
           <img
@@ -150,6 +151,110 @@ export default function About() {
           📃Resume
         </a>
       </div>
+    </div>
+  );
+};
+
+const AboutMobile = () => {
+  return (
+    <div className='about-mobile'>
+      <div className='mobile-janisImage'>
+        <img
+          className='janis-image-two'
+          src={cartoonJanisTwo}
+          alt='Janis Chan'
+          title='Janis Chan'
+        />
+      </div>
+      <div className='mobile-intro'>
+        <TypeAnimation
+          sequence={[`Hi! I am Janis Chan!`, 30000, '']}
+          speed={50}
+          style={{
+            whiteSpace: 'pre-line',
+            fontSize: '1.5em',
+            fontWeight: '600',
+          }}
+          repeat={Infinity}
+        />
+      </div>
+      <div className='mobile-aboutGroup'>
+        <img
+          src={australia}
+          className='mobile-card card-australia'
+          alt='Australia'
+          title='Australia'
+        />
+        <img
+          src={hongKong}
+          className='mobile-card card-hongKong'
+          alt='Hong Kong'
+          title='Hong Kong'
+        />
+        <img
+          src={hobby}
+          className='mobile-card card-hobby'
+          alt='Hobby'
+          title='Hobby'
+        />
+
+        <img
+          src={design}
+          className='mobile-card card-design'
+          alt='Design'
+          title='Design'
+        />
+        <img
+          src={personality}
+          className='mobile-card card-personality'
+          alt='Personality'
+          title='Personality'
+        />
+        <img
+          src={programming}
+          className='mobile-card card-program'
+          alt='Programming'
+          title='Programming'
+        />
+        <img
+          src={study}
+          className='mobile-card card-study'
+          alt='Study'
+          title='Study'
+        />
+        <img
+          src={work}
+          className='mobile-card card-work'
+          alt='Work'
+          title='Work'
+        />
+        <img
+          src={resume}
+          className='mobile-card card-resume'
+          alt='Resume'
+          title='Resume'
+        />
+        <p className='mobile-tag tag-Resume'>Resume</p>
+        <p className='mobile-tag tag-australia'>Australia</p>
+        <p className='mobile-tag tag-hongKong'>Hong Kong</p>
+        <p className='mobile-tag tag-work'>Work</p>
+        <p className='mobile-tag tag-personality'>Personality</p>
+        <p className='mobile-tag tag-study'>Study</p>
+        <p className='mobile-tag tag-program'>Program</p>
+        <p className='mobile-tag tag-hobby'>Hobby</p>
+        <p className='mobile-tag tag-design'>Design</p>
+      </div>
+    </div>
+  );
+};
+
+export default function About() {
+  return (
+    <div className='about side-wrapper'>
+      <Navbar />
+      <HeadingBar />
+      <AboutDesktop />
+      <AboutMobile />
     </div>
   );
 }

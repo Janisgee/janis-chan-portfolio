@@ -137,3 +137,22 @@ textarea {
 .contact-icon a:hover {
   color: #f20467;
 }
+
+@media only screen and (min-width: 1920px) {
+  /* Contact */
+  .contact {
+    justify-content: space-evenly;
+  }
+  .contact .contactForm-wrapper .message-result {
+    width: 30%;
+  }
+
+  .contact .contact-icon {
+    right: 19vw;
+    font-size: 2em;
+  }
+
+  .contact .paper-plane {
+    right: 39vw;
+  }
+}

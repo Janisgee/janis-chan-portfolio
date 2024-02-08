@@ -24,6 +24,20 @@ body {
   display: none;
 }
 
+.desktopLogo .janis-logo {
+  position: absolute;
+  width: 7vw;
+  padding: 5vh;
+}
+
+.side-wrapper .main-wrapper {
+  display: none;
+}
+
+.about-mobile {
+  display: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animation-common {
     animation-duration: 1s;
@@ -257,7 +271,7 @@ body {
 
 @media only screen and (min-width: 1920px) {
   /* Background */
-  .rootLayout .janis-logo {
+  .desktopLogo .janis-logo {
     width: 5vw;
     left: 16vw;
   }
@@ -293,141 +307,21 @@ body {
     left: 18%;
     font-size: 2em;
   }
-
-  /* About */
-
-  .side-wrapper {
-    padding: 9vh 20vw;
-  }
-
-  .side-wrapper .headingBar a {
-    font-size: 1.3em;
-  }
-
-  .about .aboutChoice {
-    gap: 9vw;
-  }
-
-  .about .intoName {
-    padding-top: 14vh;
-  }
-
-  .aboutChoice .cardsGroup .janis-image-two {
-    margin-top: 27.5vh;
-    margin-left: 11.2vw;
-  }
-
-  .aboutChoice .card {
-    left: 205%;
-  }
-
-  .aboutChoice .aboutMessage {
-    width: 27vw;
-    margin-top: 10vh;
-  }
-
-  .aboutChoice .aboutImage img {
-    height: 12vh;
-  }
-
-  .resume {
-    left: 72%;
-    bottom: 30%;
-  }
-
-  /* Coding Skill */
-
-  .coding .codingbackground {
-    margin-top: 22vh;
-  }
-  .coding .enterSign {
-    padding-left: 53vw;
-  }
-
-  .skill {
-    margin-top: 10vh;
-    gap: 5vw;
-  }
-
-  .coding .codingSkills h1 {
-    font-size: 6em;
-  }
-
-  .codingSkills .section {
-    padding-top: 0vh;
-    width: 48%;
-  }
-
-  .section .card-3d-wrap {
-    height: 40%;
-  }
-
-  .section .skill-logo {
-    height: 6vh;
-  }
-
-  .section .skill-label .skill-logo {
-    height: 5vh;
-  }
-
-  .section h3 {
-    font-size: 2em;
-  }
-
-  .skill-wrap h4 {
-    font-size: 1.5em;
-  }
-
-  .tech-logo {
-    height: 7vh;
-    margin: 0 0.5vw;
-  }
-  .card-front {
-    width: 55%;
-    height: 80%;
-  }
-  /* My Work */
-  .myWork .content {
-    gap: 8vw;
-  }
-  .content .projects {
-    line-height: 9vh;
-    width: 25vw;
-  }
-  .work p {
-    font-size: 1.3em;
-  }
-
-  /* Contact */
-  .contact {
-    justify-content: space-evenly;
-  }
-  .contact .contactForm-wrapper .message-result {
-    width: 30%;
-  }
-
-  .contact .contact-icon {
-    right: 19vw;
-    font-size: 2em;
-  }
-
-  .contact .paper-plane {
-    right: 39vw;
-  }
 }
 
 @media only screen and (max-width: 640px) {
+  /* Home */
   body {
     margin: 0;
   }
 
-  .rootLayout .janis-logo {
+  .desktopLogo .janis-logo {
     display: none;
   }
 
   header {
     background-color: #1d1f1d;
-    height: 108px;
+
     display: block;
   }
 
@@ -439,9 +333,10 @@ body {
   .background .containerbackground {
     position: absolute;
     z-index: -1;
-    top: 40%;
-    left: 11vw;
-    font-size: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
     text-align: center;
     text-transform: uppercase;
     user-select: none;
@@ -454,9 +349,13 @@ body {
       -31px 36px 60px rgba(16, 16, 16, 0.4);
   }
 
+  .navBar-logo {
+    align-self: center;
+    padding-left: 5vw;
+  }
+
   .navBar-logo .janis-logo {
     display: inline-block;
-    margin: 1.5vh 3vw;
     width: 11vw;
   }
 
@@ -465,12 +364,10 @@ body {
   }
 
   .navbarTop {
+    height: 12vh;
     position: relative;
     z-index: 2;
     justify-content: space-between;
-  }
-  .main-wrapper .mobile-menu {
-    margin-top: 0;
   }
 
   #hamburger-icon {
@@ -484,22 +381,21 @@ body {
   }
 
   .bar {
-    width: 40px;
-    height: 7px;
+    height: 0.7vh;
     background-color: white;
     margin: 6px;
     transition: 0.4s;
   }
 
   .bars {
-    display: block;
-    float: right;
-    padding: 35px;
+    width: 14vw;
+    align-self: center;
+    padding-right: 5vw;
   }
 
   .open .bar1 {
     -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-2px, 4px);
   }
 
   .open .bar2 {
@@ -512,30 +408,29 @@ body {
   }
 
   .main-wrapper .mobile-menu {
-    z-index: -1;
-    position: unset;
+    /* z-index: -1;
+    position: unset; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #1d1f1d;
     padding: 24px 0 24px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
   }
 
   .main-wrapper .mobile-menu a {
     color: white;
     width: 100%;
     line-height: 2;
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 
   .main-wrapper .mobile-menu a:hover {
     color: #f20467;
   }
-
-  /* .bubble {
-    z-index: 3;
-  } */
 
   .sm-hidden {
     display: none;
@@ -555,9 +450,20 @@ body {
     position: absolute;
     display: unset;
     width: 112vw;
-    bottom: 23%;
+    bottom: 13%;
     right: -34%;
     user-select: none;
     -webkit-user-drag: none;
+  }
+
+  /* Pages-Navbar */
+  .side-wrapper {
+    padding: 0;
+  }
+  .side-wrapper .main-wrapper {
+    display: block;
+  }
+  .side-wrapper .headingBar {
+    display: none;
   }
 }

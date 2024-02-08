@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Coding.css';
 import HeadingBar from './utilities/HeadingBar.js';
 import FlippingCard from './utilities/FlippingCard.js';
+import Navbar from './utilities/Navbar.js';
 
 export default function Coding() {
   const [enterClicked, setEnterClicked] = useState(false);
@@ -19,6 +20,7 @@ export default function Coding() {
   }
   return (
     <div className='coding side-wrapper'>
+      <Navbar />
       <HeadingBar />
       <div className='to-right animation-common'>
         <div className='codingbackground'>Skill in Coding</div>
