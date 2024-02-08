@@ -34,10 +34,6 @@ body {
   display: none;
 }
 
-.about-mobile {
-  display: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .animation-common {
     animation-duration: 1s;

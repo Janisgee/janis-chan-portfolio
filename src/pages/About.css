@@ -83,6 +83,10 @@
 .resume:hover {
   color: #f20467;
 }
+
+.about-mobile {
+  display: none;
+}
 @media only screen and (min-width: 1920px) {
   /* About */
 

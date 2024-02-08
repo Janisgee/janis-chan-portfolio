@@ -60,6 +60,10 @@
   text-align: center;
 }
 
+.side-wrapper .coding-mobile {
+  display: none;
+}
+
 @media only screen and (min-width: 1920px) {
   /* Coding Skill */
 
@@ -111,5 +115,58 @@
   .card-front {
     width: 55%;
     height: 80%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .side-wrapper .coding-desktop {
+    display: none;
+  }
+  .side-wrapper .coding-mobile {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 40% 40%;
+  }
+
+  .mobile-flippingCard {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: block;
+  }
+
+  .coding-mobile h2 {
+    text-align: center;
+  }
+
+  .card-3d-wrapper .card-front,
+  .card-3d-wrapper .card-back {
+    height: unset;
+  }
+
+  .build-tools h3 {
+    text-align: center;
+  }
+
+  .card-3d-wrap {
+    height: 67%;
+    margin: 14px auto 0;
+  }
+
+  .card-front .skill-logo {
+    height: 6vh;
+  }
+  .card-back .displayFlex .skill-logo {
+    height: 5vh;
+  }
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    justify-content: space-evenly;
+  }
+
+  .tech-logo {
+    height: 8vh;
   }
 }
