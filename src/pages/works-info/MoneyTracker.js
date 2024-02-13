@@ -48,6 +48,15 @@ export default function MoneyTracker() {
           title='MongoDB'
         />
       </div>
+      <a
+        href='https://money-tracker-vp3w.onrender.com'
+        className='clickForMore'
+        target='_blank'
+        alt='More information'
+        rel='noreferrer'
+      >
+        Click for more ...
+      </a>
     </div>
   );
 }

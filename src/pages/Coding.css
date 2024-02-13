@@ -125,7 +125,7 @@
   .side-wrapper .coding-mobile {
     height: 100vh;
     display: grid;
-    grid-template-rows: 10% 40% 40%;
+    grid-template-rows: 10% 37% 43%;
   }
 
   .mobile-flippingCard {
@@ -146,6 +146,7 @@
 
   .build-tools h3 {
     text-align: center;
+    margin: 0;
   }
 
   .card-3d-wrap {

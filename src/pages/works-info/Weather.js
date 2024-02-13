@@ -40,6 +40,15 @@ export default function Weather() {
         <img className='skill-image' src={css} alt='CSS' title='CSS' />
         <img className='skill-image' src={html} alt='HTML' title='HTML' />
       </div>
+      <a
+        href='https://worldweather-search.netlify.app'
+        className='clickForMore'
+        target='_blank'
+        alt='More information'
+        rel='noreferrer'
+      >
+        Click for more ...
+      </a>
     </div>
   );
 }
