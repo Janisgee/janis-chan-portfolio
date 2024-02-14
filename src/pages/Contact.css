@@ -156,3 +156,68 @@ textarea {
     right: 39vw;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .contact {
+    justify-content: space-evenly;
+  }
+  .contact-me {
+    padding-top: 0;
+  }
+
+  .contact-me h1 {
+    margin-top: 1vh;
+  }
+
+  .contact-me h2 {
+    font-size: 1em;
+  }
+  .contact-janis {
+    height: 56vh;
+  }
+
+  .contact-icon {
+    right: 61vw;
+  }
+
+  .contact-icon a {
+    font-size: 0.7em;
+  }
+
+  .onstart {
+    display: none;
+  }
+  .contactForm-wrapper {
+    height: 100%;
+  }
+
+  .contactForm-wrapper h1 {
+    font-size: 1em;
+  }
+
+  .contactForm-wrapper p {
+    font-size: 0.8em;
+  }
+
+  .contactForm-wrapper input {
+    height: 3.5vh;
+  }
+
+  .contactForm-wrapper textarea {
+    width: 95%;
+
+    padding: 0.5vh 0.5vw;
+  }
+
+  .contact-form-structure {
+    display: block;
+  }
+
+  .form-block {
+    padding: 0.5vh 0.5vw;
+    width: 95%;
+  }
+  .form-container {
+    padding: 1vh 2vw;
+  }
+}
