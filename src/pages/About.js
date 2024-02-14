@@ -32,9 +32,8 @@ const AboutDesktop = () => {
 
   function handleAboutClick(e) {
     e.preventDefault();
-    console.log(e.target);
     setClickedAbout(e.target.dataset.id);
-    console.log(e.target.dataset.id);
+
     e.target.parentElement.scrollTo({
       top: e.target.offsetTop,
       left: 0,
@@ -141,6 +140,7 @@ const AboutDesktop = () => {
         {clickedAbout === 'Design' && <Design />}
         {clickedAbout === 'Australia' && <Australia />}
         {clickedAbout === 'Hong Kong' && <HongKong />}
+
         <a
           href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
           target='_blank'
@@ -156,6 +156,25 @@ const AboutDesktop = () => {
 };
 
 const AboutMobile = () => {
+  const [clickedItem, setClickedItem] = useState('');
+  function handleModuleOpen(e) {
+    console.log(e.target);
+    setClickedItem(e.target.dataset.id);
+
+    if (
+      e.target.dataset.id !== 'resume' &&
+      document.querySelector('.mobile-aboutModule') !== null
+    ) {
+      document
+        .querySelector('.mobile-aboutModule')
+        .classList.remove('displayNone');
+    }
+  }
+
+  function handleCloseModule() {
+    document.querySelector('.mobile-aboutModule').classList.add('displayNone');
+  }
+  console.log(clickedItem);
   return (
     <div className='about-mobile'>
       <div className='mobile-janisImage'>
@@ -178,24 +197,27 @@ const AboutMobile = () => {
           repeat={Infinity}
         />
       </div>
-      <div className='mobile-aboutGroup'>
+      <div className='mobile-aboutGroup' onClick={handleModuleOpen}>
         <img
           src={australia}
           className='mobile-card card-australia'
           alt='Australia'
           title='Australia'
+          data-id='australia'
         />
         <img
           src={hongKong}
           className='mobile-card card-hongKong'
           alt='Hong Kong'
           title='Hong Kong'
+          data-id='hong-kong'
         />
         <img
           src={hobby}
           className='mobile-card card-hobby'
           alt='Hobby'
           title='Hobby'
+          data-id='hobby'
         />
 
         <img
@@ -203,37 +225,51 @@ const AboutMobile = () => {
           className='mobile-card card-design'
           alt='Design'
           title='Design'
+          data-id='design'
         />
         <img
           src={personality}
           className='mobile-card card-personality'
           alt='Personality'
           title='Personality'
+          data-id='personality'
         />
         <img
           src={programming}
           className='mobile-card card-program'
           alt='Programming'
           title='Programming'
+          data-id='programming'
         />
         <img
           src={study}
           className='mobile-card card-study'
           alt='Study'
           title='Study'
+          data-id='study'
         />
         <img
           src={work}
           className='mobile-card card-work'
           alt='Work'
           title='Work'
+          data-id='work'
         />
-        <img
-          src={resume}
-          className='mobile-card card-resume'
+        <a
+          href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
+          target='_blank'
           alt='Resume'
-          title='Resume'
-        />
+          rel='noreferrer'
+          className='resumeLink'
+        >
+          <img
+            src={resume}
+            className='mobile-card card-resume'
+            alt='Resume'
+            title='Resume'
+            data-id='resume'
+          />
+        </a>
         <p className='mobile-tag tag-Resume'>Resume</p>
         <p className='mobile-tag tag-australia'>Australia</p>
         <p className='mobile-tag tag-hongKong'>Hong Kong</p>
@@ -243,6 +279,20 @@ const AboutMobile = () => {
         <p className='mobile-tag tag-program'>Program</p>
         <p className='mobile-tag tag-hobby'>Hobby</p>
         <p className='mobile-tag tag-design'>Design</p>
+      </div>
+
+      <div className='mobile-aboutModule displayNone'>
+        <div className='crossModule' onClick={handleCloseModule}>
+          &times;
+        </div>
+        {clickedItem === 'hobby' && <Hobby />}
+        {clickedItem === 'personality' && <Personality />}
+        {clickedItem === 'study' && <Study />}
+        {clickedItem === 'work' && <Work />}
+        {clickedItem === 'programming' && <Programming />}
+        {clickedItem === 'design' && <Design />}
+        {clickedItem === 'australia' && <Australia />}
+        {clickedItem === 'hong-kong' && <HongKong />}
       </div>
     </div>
   );
