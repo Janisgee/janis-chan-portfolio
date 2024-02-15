@@ -83,7 +83,9 @@ export default function Contact() {
   };
   return (
     <div className='contact side-wrapper background-map'>
-      <Navbar />
+      <div className='mobile-navbar'>
+        <Navbar />
+      </div>
       <HeadingBar />
       <div className='displayFlex contact'>
         <div className='contact-me'>

@@ -281,7 +281,9 @@ const MyWorkMobile = () => {
 export default function MyWork() {
   return (
     <div className='myWork side-wrapper'>
-      <Navbar />
+      <div className='mobile-navbar'>
+        <Navbar />
+      </div>
       <HeadingBar />
       <MyWorkDesktop />
       <MyWorkMobile />

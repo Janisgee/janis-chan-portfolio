@@ -188,7 +188,9 @@ const CodingMobile = () => {
 export default function Coding() {
   return (
     <div className='coding side-wrapper'>
-      <Navbar />
+      <div className='mobile-navbar'>
+        <Navbar />
+      </div>
       <HeadingBar />
       <CodingDesktop />
       <CodingMobile />

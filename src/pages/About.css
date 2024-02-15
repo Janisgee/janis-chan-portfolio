@@ -132,6 +132,7 @@
 
 @media only screen and (max-width: 640px) {
   /* About */
+
   .about-desktop {
     display: none;
   }
@@ -140,17 +141,16 @@
     height: 100%;
     display: grid;
     padding: 0 10%;
-    grid-template-rows: 30% 10% 60%;
+    grid-template-rows: 43% 8% 50%;
   }
   .mobile-janisImage .janis-image-two {
     display: block;
     width: 16vh;
-    margin: 3vh auto 0;
+    margin: 16vh auto 0;
     border: 0.3rem solid white;
   }
   .mobile-intro {
     text-align: center;
-    margin-bottom: 1vh;
   }
 
   .mobile-aboutGroup {

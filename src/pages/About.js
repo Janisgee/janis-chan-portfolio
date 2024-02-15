@@ -301,7 +301,9 @@ const AboutMobile = () => {
 export default function About() {
   return (
     <div className='about side-wrapper'>
-      <Navbar />
+      <div className='mobile-navbar'>
+        <Navbar />
+      </div>
       <HeadingBar />
       <AboutDesktop />
       <AboutMobile />
