@@ -139,14 +139,18 @@
 
   .about-mobile {
     height: 100%;
-    display: grid;
-    padding: 0 10%;
-    grid-template-rows: 43% 8% 50%;
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .mobile-janisImage {
+    margin-top: 2%;
   }
   .mobile-janisImage .janis-image-two {
     display: block;
     width: 16vh;
-    margin: 16vh auto 0;
+    margin: 0 auto;
     border: 0.3rem solid white;
   }
   .mobile-intro {
@@ -154,15 +158,11 @@
   }
 
   .mobile-aboutGroup {
-    width: 100%;
+    width: 90%;
     display: grid;
-    /* flex-wrap: wrap;
-    row-gap: 2vw;
-    column-gap: 3vh; */
-    grid-template-rows: 25% 5% 25% 5% 25% 5%;
-    grid-template-columns: 30% 30% 30%;
-    row-gap: 5%;
-    column-gap: 3.3%;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5%;
+    margin: 0 5%;
   }
 
   .mobile-card {
@@ -181,63 +181,6 @@
     margin: 0;
     text-align: center;
     font-weight: 600;
-  }
-
-  .mobile-aboutGroup .card-resume {
-    order: 1;
-  }
-  .mobile-aboutGroup .card-australia {
-    order: 2;
-  }
-
-  .mobile-aboutGroup .card-hongKong {
-    order: 3;
-  }
-
-  .mobile-aboutGroup .tag-Resume {
-    order: 4;
-  }
-  .mobile-aboutGroup .tag-australia {
-    order: 5;
-  }
-  .mobile-aboutGroup .tag-hongKong {
-    order: 6;
-  }
-  .mobile-aboutGroup .card-work {
-    order: 7;
-  }
-  .mobile-aboutGroup .card-personality {
-    order: 8;
-  }
-  .mobile-aboutGroup .card-study {
-    order: 9;
-  }
-  .mobile-aboutGroup .tag-work {
-    order: 10;
-  }
-  .mobile-aboutGroup .tag-personality {
-    order: 11;
-  }
-  .mobile-aboutGroup .tag-study {
-    order: 12;
-  }
-  .mobile-aboutGroup .card-program {
-    order: 13;
-  }
-  .mobile-aboutGroup .card-hobby {
-    order: 14;
-  }
-  .mobile-aboutGroup .card-design {
-    order: 15;
-  }
-  .mobile-aboutGroup .tag-program {
-    order: 16;
-  }
-  .mobile-aboutGroup .tag-hobby {
-    order: 17;
-  }
-  .mobile-aboutGroup .tag-design {
-    order: 18;
   }
 
   .displayNone {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './Background.css';
 import bubble from '../../images/bubble.png';
 import shadow from '../../images/shadow-3.png';
@@ -17,7 +18,12 @@ export default function Background() {
     backgroundWord.style.setProperty('--x', e.clientX - position.top + 'px');
     backgroundWord.style.setProperty('--y', e.clientY - position.left + 'px');
   };
-  document.addEventListener('mousemove', moveElements);
+
+  useEffect(() => {
+    document.addEventListener('mousemove', moveElements);
+    return () => document.removeEventListener('mousemove', moveElements);
+  }, []);
+
   return (
     <div className='background'>
       <div className='tracker'></div>

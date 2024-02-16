@@ -1,0 +1,13 @@
+.rootLayout .mobile-navbar {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .rootLayout .mobile-navbar {
+    display: block;
+    width: 100%;
+  }
+  .rootLayout .desktopLogo {
+    display: none;
+  }
+}

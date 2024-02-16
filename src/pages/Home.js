@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <div className='homeContainer'>
       <Background />
-      <Navbar />
+      <div className='home-navBar'>
+        <Navbar />
+      </div>
     </div>
   );
 }

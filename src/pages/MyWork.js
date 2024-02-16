@@ -11,7 +11,6 @@ import Dictionary from './works-info/Dictionary';
 import ShoppingList from './works-info/ShoppingList';
 import MovieRating from './works-info/MovieRating';
 import ReactQuiz from './works-info/ReactQuiz';
-import Navbar from './utilities/Navbar';
 
 import dictionary from '../images/works/dictionary-project.png';
 import forkify from '../images/works/forkifyRecipe.png';
@@ -281,9 +280,6 @@ const MyWorkMobile = () => {
 export default function MyWork() {
   return (
     <div className='myWork side-wrapper'>
-      <div className='mobile-navbar'>
-        <Navbar />
-      </div>
       <HeadingBar />
       <MyWorkDesktop />
       <MyWorkMobile />

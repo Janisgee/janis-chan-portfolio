@@ -12,7 +12,6 @@ import animationDataEmailForm from '../lotties/email-form.json';
 import animationDataEmailFail from '../lotties/email-sent-fail.json';
 
 import contactJanis from '../images/contact-janis.png';
-import Navbar from './utilities/Navbar';
 
 export default function Contact() {
   const [emailSent, setEmailSent] = useState(false);
@@ -83,9 +82,6 @@ export default function Contact() {
   };
   return (
     <div className='contact side-wrapper background-map'>
-      <div className='mobile-navbar'>
-        <Navbar />
-      </div>
       <HeadingBar />
       <div className='displayFlex contact'>
         <div className='contact-me'>

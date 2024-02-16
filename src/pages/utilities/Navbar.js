@@ -1,12 +1,17 @@
-import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import Logo from './Logo';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faSquareGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
+  const location = useLocation();
   const [navBarOpen, setNavBarOpen] = useState(false);
+
+  useEffect(() => {
+    setNavBarOpen(false);
+  }, [location]);
 
   function handleNavBarClick(e) {
     e.preventDefault();
@@ -50,42 +55,22 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  onClick={() => {
-                    window.location.href = '/about';
-                  }}
-                  data-id='about'
-                >
+                <NavLink to='/about' data-id='about'>
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  onClick={() => {
-                    window.location.href = '/coding-skill';
-                  }}
-                  data-id='coding-skill'
-                >
+                <NavLink to='/coding-skill' data-id='coding-skill'>
                   Coding Skill
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  onClick={() => {
-                    window.location.href = '/my-work';
-                  }}
-                  data-id='my-work'
-                >
+                <NavLink to='/my-work' data-id='my-work'>
                   My Work
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  onClick={() => {
-                    window.location.href = '/contact';
-                  }}
-                  data-id='contact'
-                >
+                <NavLink to='/contact' data-id='contact'>
                   Contact
                 </NavLink>
               </li>

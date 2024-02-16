@@ -161,12 +161,9 @@ textarea {
   .contact {
     justify-content: space-evenly;
   }
+
   .contact-me {
     padding-top: 0;
-  }
-
-  .contact-me h1 {
-    margin-top: 14vh;
   }
 
   .contact-me h2 {
@@ -205,7 +202,6 @@ textarea {
 
   .contactForm-wrapper textarea {
     width: 95%;
-
     padding: 0.5vh 0.5vw;
   }
 
@@ -218,7 +214,6 @@ textarea {
     width: 95%;
   }
   .form-container {
-    margin-top: 70%;
     padding: 1vh 2vw;
   }
 }

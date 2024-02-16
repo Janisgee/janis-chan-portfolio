@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import './About.css';
 import { TypeAnimation } from 'react-type-animation';
 import HeadingBar from './utilities/HeadingBar.js';
-// import cartoonJanis from '../images/cartoon-janis.png';
+
 import cartoonJanisTwo from '../images/cartoon-janis-two.jpg';
 import australia from '../images/about-janis/australia.png';
 import hongKong from '../images/about-janis/hong-kong.png';
@@ -23,7 +23,42 @@ import Design from './about-info/Design.js';
 import Australia from './about-info/Australia.js';
 import HongKong from './about-info/HongKong.js';
 import Intro from './about-info/Intro.js';
-import Navbar from './utilities/Navbar.js';
+
+const AUSTRALIA = {
+  imageSrc: australia,
+  name: 'Australia',
+  component: <Australia />,
+};
+const HONG_KONG = {
+  imageSrc: hongKong,
+  name: 'Hong Kong',
+  component: <HongKong />,
+};
+const HOBBY = { imageSrc: hobby, name: 'Hobby', component: <Hobby /> };
+const PERSONALITY = {
+  imageSrc: personality,
+  name: 'Personality',
+  component: <Personality />,
+};
+const STUDY = { imageSrc: study, name: 'Study', component: <Study /> };
+const WORK = { imageSrc: work, name: 'Previous Work', component: <Work /> };
+const PROGRAMMING = {
+  imageSrc: programming,
+  name: 'Programming',
+  component: <Programming />,
+};
+const DESIGN = { imageSrc: design, name: 'Design', component: <Design /> };
+
+const aboutCardData = [
+  AUSTRALIA,
+  HONG_KONG,
+  HOBBY,
+  PERSONALITY,
+  STUDY,
+  WORK,
+  PROGRAMMING,
+  DESIGN,
+];
 
 const AboutDesktop = () => {
   const theta = Math.PI / 4.0;
@@ -156,25 +191,16 @@ const AboutDesktop = () => {
 };
 
 const AboutMobile = () => {
-  const [clickedItem, setClickedItem] = useState('');
-  function handleModuleOpen(e) {
-    console.log(e.target);
-    setClickedItem(e.target.dataset.id);
+  const [openCard, setOpenCard] = useState(null);
 
-    if (
-      e.target.dataset.id !== 'resume' &&
-      document.querySelector('.mobile-aboutModule') !== null
-    ) {
-      document
-        .querySelector('.mobile-aboutModule')
-        .classList.remove('displayNone');
-    }
+  function handleOpenModule(card) {
+    setOpenCard(card);
   }
 
   function handleCloseModule() {
-    document.querySelector('.mobile-aboutModule').classList.add('displayNone');
+    setOpenCard(null);
   }
-  console.log(clickedItem);
+
   return (
     <div className='about-mobile'>
       <div className='mobile-janisImage'>
@@ -197,103 +223,52 @@ const AboutMobile = () => {
           repeat={Infinity}
         />
       </div>
-      <div className='mobile-aboutGroup' onClick={handleModuleOpen}>
-        <img
-          src={australia}
-          className='mobile-card card-australia'
-          alt='Australia'
-          title='Australia'
-          data-id='australia'
-        />
-        <img
-          src={hongKong}
-          className='mobile-card card-hongKong'
-          alt='Hong Kong'
-          title='Hong Kong'
-          data-id='hong-kong'
-        />
-        <img
-          src={hobby}
-          className='mobile-card card-hobby'
-          alt='Hobby'
-          title='Hobby'
-          data-id='hobby'
-        />
-
-        <img
-          src={design}
-          className='mobile-card card-design'
-          alt='Design'
-          title='Design'
-          data-id='design'
-        />
-        <img
-          src={personality}
-          className='mobile-card card-personality'
-          alt='Personality'
-          title='Personality'
-          data-id='personality'
-        />
-        <img
-          src={programming}
-          className='mobile-card card-program'
-          alt='Programming'
-          title='Programming'
-          data-id='programming'
-        />
-        <img
-          src={study}
-          className='mobile-card card-study'
-          alt='Study'
-          title='Study'
-          data-id='study'
-        />
-        <img
-          src={work}
-          className='mobile-card card-work'
-          alt='Work'
-          title='Work'
-          data-id='work'
-        />
-        <a
-          href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
-          target='_blank'
-          alt='Resume'
-          rel='noreferrer'
-          className='resumeLink'
-        >
-          <img
-            src={resume}
-            className='mobile-card card-resume'
+      <div className='mobile-aboutGroup'>
+        <div className='mobile-resume'>
+          <a
+            href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
+            target='_blank'
             alt='Resume'
-            title='Resume'
-            data-id='resume'
-          />
-        </a>
-        <p className='mobile-tag tag-Resume'>Resume</p>
-        <p className='mobile-tag tag-australia'>Australia</p>
-        <p className='mobile-tag tag-hongKong'>Hong Kong</p>
-        <p className='mobile-tag tag-work'>Work</p>
-        <p className='mobile-tag tag-personality'>Personality</p>
-        <p className='mobile-tag tag-study'>Study</p>
-        <p className='mobile-tag tag-program'>Program</p>
-        <p className='mobile-tag tag-hobby'>Hobby</p>
-        <p className='mobile-tag tag-design'>Design</p>
+            rel='noreferrer'
+            className='resumeLink'
+          >
+            <img
+              src={resume}
+              className='mobile-card card-resume'
+              alt='Resume'
+              title='Resume'
+              data-id='resume'
+            />{' '}
+          </a>
+          <p className='mobile-tag'>Resume</p>
+        </div>
+        {aboutCardData.map((card, ii) => {
+          return (
+            <div
+              className='mobile-about-card'
+              key={ii}
+              onClick={() => handleOpenModule(card)}
+            >
+              <img
+                src={card.imageSrc}
+                className='mobile-card'
+                alt={card.name}
+                title={card.name}
+              />
+              <p className='mobile-tag'>{card.name}</p>
+            </div>
+          );
+        })}
       </div>
 
-      <div className='mobile-aboutModule displayNone'>
-        <div className='crossModule' onClick={handleCloseModule}>
-          &times;
+      {openCard != null && (
+        <div className='mobile-aboutModule'>
+          <div className='crossModule' onClick={handleCloseModule}>
+            &times;
+          </div>
+          {openCard.component}
         </div>
-        {clickedItem === 'hobby' && <Hobby />}
-        {clickedItem === 'personality' && <Personality />}
-        {clickedItem === 'study' && <Study />}
-        {clickedItem === 'work' && <Work />}
-        {clickedItem === 'programming' && <Programming />}
-        {clickedItem === 'design' && <Design />}
-        {clickedItem === 'australia' && <Australia />}
-        {clickedItem === 'hong-kong' && <HongKong />}
-      </div>
+      )}
     </div>
   );
 };
@@ -301,9 +276,6 @@ const AboutMobile = () => {
 export default function About() {
   return (
     <div className='about side-wrapper'>
-      <div className='mobile-navbar'>
-        <Navbar />
-      </div>
       <HeadingBar />
       <AboutDesktop />
       <AboutMobile />

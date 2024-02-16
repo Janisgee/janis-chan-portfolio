@@ -309,6 +309,10 @@ body {
   /* Home */
   body {
     margin: 0;
+    user-select: none;
+  }
+  .home-navBar {
+    display: none;
   }
 
   .desktopLogo .janis-logo {
@@ -384,7 +388,7 @@ body {
   }
 
   .bars {
-    width: 14vw;
+    width: 10vw;
     align-self: center;
     padding-right: 5vw;
   }
@@ -401,11 +405,6 @@ body {
   .open .bar3 {
     -webkit-transform: rotate(45deg) translate(-6px, -8px);
     transform: rotate(45deg) translate(-11px, -13px);
-  }
-
-  .mobile-navbar {
-    position: absolute;
-    width: 100%;
   }
 
   .main-wrapper .mobile-menu {
@@ -441,7 +440,7 @@ body {
     position: absolute;
     display: unset;
     width: 73vw;
-    bottom: 1%;
+    bottom: -10%;
     right: 48%;
     user-select: none;
     -webkit-user-drag: none;
@@ -450,8 +449,8 @@ body {
   .mobile-bubble-md {
     position: absolute;
     display: unset;
-    width: 112vw;
-    bottom: 13%;
+    width: 108vw;
+    bottom: 0%;
     right: -34%;
     user-select: none;
     -webkit-user-drag: none;
