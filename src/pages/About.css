@@ -3,14 +3,15 @@
 }
 
 .janis-image-two {
-  /* position: absolute; */
-  /* top: 33%;
-  left: 21.5%; */
+  display: block;
+  margin: 0 auto;
   width: 245px;
   border-radius: 50%;
   border: 0.5rem solid white;
-  /* filter: drop-shadow(30px 10px 4px #484849); */
-  /* padding: 10vh 10vw; */
+}
+
+.about-desktop {
+  height: 70vh;
 }
 
 .wheel {
@@ -18,8 +19,8 @@
   height: 200px;
   background-color: transparent;
   position: absolute;
-  left: 27.5%;
-  top: 53%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -42,6 +43,7 @@
 .aboutChoice {
   display: flex;
   gap: 14vw;
+  height: 100%;
 }
 
 .aboutMessage {
@@ -53,9 +55,15 @@
   padding-top: 24vh;
 }
 
-.cardsGroup .janis-image-two {
-  margin-top: 21vh;
-  margin-left: 11.5vw;
+.cardsGroup {
+  flex: 1;
+}
+
+.cardContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .aboutImage {
@@ -106,15 +114,6 @@
     padding-top: 14vh;
   }
 
-  .aboutChoice .cardsGroup .janis-image-two {
-    margin-top: 27.5vh;
-    margin-left: 11.2vw;
-  }
-
-  .aboutChoice .card {
-    left: 205%;
-  }
-
   .aboutChoice .aboutMessage {
     width: 27vw;
     margin-top: 10vh;
@@ -130,7 +129,7 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 1024px) {
   /* About */
 
   .about-desktop {
@@ -160,7 +159,7 @@
   .mobile-aboutGroup {
     width: 90%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 5%;
     margin: 0 5%;
   }
@@ -191,7 +190,7 @@
     position: absolute;
     z-index: 2;
     background: white;
-    width: 95%;
+    width: 70%;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -217,5 +216,15 @@
   .mobile-aboutModule h5 {
     font-size: 0.6em;
     text-align: left;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .mobile-aboutGroup {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .mobile-aboutModule {
+    width: 90%;
   }
 }

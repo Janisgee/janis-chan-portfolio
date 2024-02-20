@@ -27,14 +27,16 @@ export default function Background() {
   return (
     <div className='background'>
       <div className='tracker'></div>
-      <div
-        className='containerbackground  to-right animation-common'
-        style={{ '--delay': '0s' }}
-        data-text='Janis Chan Software Developer'
-      >
-        <div>Janis Chan</div>
-        <div className='softwareWord'>Software</div>
-        <div className='developerWord'>Developer</div>
+      <div className=''>
+        <div
+          className='containerbackground  to-right animation-common'
+          style={{ '--delay': '0s' }}
+          data-text='Janis Chan Software Developer'
+        >
+          <div>Janis&nbsp;Chan</div>
+          <div className='softwareWord'>Software</div>
+          <div className='developerWord'>Developer</div>
+        </div>
       </div>
       <img
         src={shadow}

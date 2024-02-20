@@ -6,7 +6,8 @@ body {
   font-family: 'Tektur', sans-serif;
 
   background-color: rgb(219, 217, 217);
-  overflow: hidden;
+  overflow: auto;
+  margin: 0;
 }
 
 .side-wrapper {
@@ -302,6 +303,32 @@ body {
   .main-wrapper .navBar {
     left: 18%;
     font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 1040px) {
+  /* background */
+  .background .containerbackground {
+    top: 21%;
+    left: 17%;
+    font-size: 6em;
+  }
+
+  .desktopLogo .janis-logo {
+    width: 7vw;
+    padding: 3vh;
+  }
+  .rootLayout .mobile-navbar {
+    display: none;
+  }
+  .background .bubble-lg {
+    top: 75vh;
+  }
+  .navBar {
+    font-size: 1.3em;
+  }
+  .side-wrapper .menu {
+    gap: 16px;
   }
 }
 

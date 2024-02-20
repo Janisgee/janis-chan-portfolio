@@ -63,12 +63,14 @@ const aboutCardData = [
 const AboutDesktop = () => {
   const theta = Math.PI / 4.0;
   const [scrollTheta, setScrollTheta] = useState(0);
-  const [clickedAbout, setClickedAbout] = useState('');
+  const [clickedAbout, setClickedAbout] = useState(null);
 
-  function handleAboutClick(e) {
-    e.preventDefault();
-    setClickedAbout(e.target.dataset.id);
+  function handleAboutClick(card) {
+    setClickedAbout(card);
+    console.log(clickedAbout);
+  }
 
+  function handleScrollTo(e) {
     e.target.parentElement.scrollTo({
       top: e.target.offsetTop,
       left: 0,
@@ -77,17 +79,6 @@ const AboutDesktop = () => {
   }
 
   const cardPositions = useMemo(() => {
-    const cardImages = [
-      { src: australia, name: 'Australia' },
-      { src: hongKong, name: 'Hong Kong' },
-      { src: hobby, name: 'Hobby' },
-      { src: personality, name: 'Personality' },
-      { src: study, name: 'Study' },
-      { src: work, name: 'Previous Work' },
-      { src: programming, name: 'Programming' },
-      { src: design, name: 'Design' },
-    ];
-
     let new_theta = 0.0;
     let new_x = 0.0;
     let new_y = 0.0;
@@ -100,7 +91,7 @@ const AboutDesktop = () => {
       y: 100,
     };
 
-    return cardImages.map((image, index) => {
+    return aboutCardData.map((image, index) => {
       new_theta = theta * index;
       new_x = Math.cos(new_theta) * wheel_radius;
       new_y = -1 * Math.sin(new_theta) * wheel_radius;
@@ -130,51 +121,49 @@ const AboutDesktop = () => {
     <div className='about-desktop'>
       <div className='aboutChoice'>
         <div className='cardsGroup'>
-          <img
-            className='janis-image-two'
-            src={cartoonJanisTwo}
-            alt='Janis Chan'
-            title='Janis Chan'
-          />
-          <div
-            className='wheel'
-            style={{
-              transform: `translate(-50%, -50%) rotate(${scrollTheta}deg)`,
-            }}
-          >
-            {cardPositions.map((card, ind) => {
-              return (
-                <div
-                  key={ind}
-                  className='card'
-                  style={{
-                    top: card.y,
-                    left: card.x,
-                    transform: `translate(-50%, -50%) rotate(${-scrollTheta}deg)`,
-                  }}
-                  onClick={handleAboutClick}
-                >
-                  <img
-                    src={card.image.src}
+          <div className='cardContainer'>
+            <img
+              className='janis-image-two'
+              src={cartoonJanisTwo}
+              alt='Janis Chan'
+              title='Janis Chan'
+            />
+            <div
+              className='wheel'
+              style={{
+                transform: `translate(-50%, -50%) rotate(${scrollTheta}deg)`,
+              }}
+            >
+              {cardPositions.map((card, ind) => {
+                return (
+                  <div
+                    key={ind}
                     className='card'
-                    alt={card.image.name}
-                    title={card.image.name}
-                    data-id={card.image.name}
-                  />
-                </div>
-              );
-            })}
+                    style={{
+                      top: card.y,
+                      left: card.x,
+                      transform: `translate(-50%, -50%) rotate(${-scrollTheta}deg)`,
+                    }}
+                    onClick={(e) => {
+                      handleAboutClick(card);
+                      handleScrollTo(e);
+                    }}
+                  >
+                    <img
+                      src={card.image.imageSrc}
+                      className='card'
+                      alt={card.image.name}
+                      title={card.image.name}
+                      data-id={card.image.name}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-        {clickedAbout === '' && <Intro />}
-        {clickedAbout === 'Hobby' && <Hobby />}
-        {clickedAbout === 'Personality' && <Personality />}
-        {clickedAbout === 'Study' && <Study />}
-        {clickedAbout === 'Previous Work' && <Work />}
-        {clickedAbout === 'Programming' && <Programming />}
-        {clickedAbout === 'Design' && <Design />}
-        {clickedAbout === 'Australia' && <Australia />}
-        {clickedAbout === 'Hong Kong' && <HongKong />}
+        {clickedAbout === null && <Intro />}
+        {clickedAbout !== null && clickedAbout.image.component}
 
         <a
           href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'

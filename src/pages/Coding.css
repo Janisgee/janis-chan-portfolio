@@ -118,6 +118,46 @@
   }
 }
 
+@media only screen and (min-width: 640px) and (max-width: 1040px) {
+  .section {
+    padding-top: unset;
+    height: 63vh;
+  }
+  .coding-desktop {
+    padding-top: 10vh;
+  }
+  .codingbackground {
+    font-size: 7em;
+  }
+
+  .enterSign {
+    padding-left: 33vw;
+  }
+
+  .codingSkills h1 {
+    display: none;
+  }
+
+  .card-3d-wrapper {
+    width: 550px;
+  }
+
+  .card-3d-wrap {
+    margin: 14px auto 0;
+  }
+
+  .skill-logo {
+    height: 9vh;
+  }
+  .section h3 {
+    padding-top: 10vh;
+  }
+
+  .tech-logo {
+    margin: 0 1vw;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .side-wrapper .coding-desktop {
     display: none;
