@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './Coding.css';
 import HeadingBar from './utilities/HeadingBar.js';
 import FlippingCard from './utilities/FlippingCard.js';
-import Navbar from './utilities/Navbar.js';
 
 import react2 from '../images/skills/react2.png';
 import javaScript from '../images/skills/js.png';
