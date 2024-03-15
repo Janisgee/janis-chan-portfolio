@@ -42,8 +42,9 @@
 
 .aboutChoice {
   display: flex;
-  gap: 14vw;
+  gap: 7vw;
   height: 100%;
+  padding-top: 5vh;
 }
 
 .aboutMessage {
@@ -80,7 +81,6 @@
   position: absolute;
   color: black;
   left: 83%;
-  bottom: 7%;
   font-size: 1.3em;
   text-decoration: none;
   background-color: lightgrey;
