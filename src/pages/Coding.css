@@ -172,7 +172,7 @@
   .side-wrapper .coding-mobile {
     height: 100vh;
     display: grid;
-    grid-template-rows: 0fr 1fr 1fr;
+    grid-template-rows: 0fr 0.7fr 1fr;
   }
 
   .mobile-flippingCard {

@@ -6,7 +6,7 @@ body {
   font-family: 'Tektur', sans-serif;
 
   background-color: rgb(219, 217, 217);
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -468,7 +468,7 @@ body {
     display: unset;
     width: 73vw;
     bottom: -10%;
-    right: 48%;
+    right: 35%;
     user-select: none;
     -webkit-user-drag: none;
   }
@@ -476,9 +476,9 @@ body {
   .mobile-bubble-md {
     position: absolute;
     display: unset;
-    width: 108vw;
-    bottom: 0%;
-    right: -34%;
+    width: 64vw;
+    bottom: 30%;
+    left: 35%;
     user-select: none;
     -webkit-user-drag: none;
   }
