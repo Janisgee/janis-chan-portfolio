@@ -8,6 +8,7 @@ import javaScript from '../images/skills/js.png';
 import css from '../images/skills/css.png';
 import html from '../images/skills/html.png';
 import nodeJs from '../images/skills/Node.js_logo.png';
+import openAI from '../images/skills/openAI.png';
 import nextjs from '../images/skills/nextjs.png';
 import expressjs from '../images/skills/ExpressJS-logo.png';
 import mongoDB from '../images/skills/MongoDB_Logo.svg.png';
@@ -149,6 +150,7 @@ const CodingMobile = () => {
                     alt='postgresSQL'
                     title='postgresSQL'
                   />
+                       <img className='skill-logo' src={openAI} alt='OpenAI' title='Open AI' />
                   </div>
                 </div>
               </div>

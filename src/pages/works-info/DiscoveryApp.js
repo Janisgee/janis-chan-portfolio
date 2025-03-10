@@ -1,3 +1,4 @@
+import openAI from '../../images/skills/openAI.png';
 import discoveryApp from '../../images/works/discovery-app.png';
 import nextJs from '../../images/skills/nextjs.png';
 import postgresSQL from '../../images/skills/postgresSQL.png';
@@ -25,11 +26,12 @@ export default function DiscoveryApp() {
         />
       </a>
       <p>
-        This is an application helping user to get place knowladge around the world. Using Next.js to build its front-end interface and Go lang to create back-end server. And using Postgres SQL to store user's bookmark and accounts data.
+        This is an application helping user to get place knowladge around the world. Using Next.js to build its front-end interface and Go lang to create back-end server. Using AI models generated places contents. And using Postgres SQL to store user's bookmark and accounts data.
       </p>
 
       <div className='work-skill'>
         <span>Tool used: </span>
+        <img className='skill-image' src={openAI} alt='OpenAI' title='Open AI' />
         <img className='skill-image' src={nextJs} alt='NextJs' title='Next.js' />
         <img className='skill-image' src={postgresSQL} alt='postgresSQL' title='ProgresSQL' />
         <img className='skill-image' src={golang} alt='goLang

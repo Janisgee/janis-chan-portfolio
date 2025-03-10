@@ -195,7 +195,7 @@
 
   .card-3d-wrapper .card-front,
   .card-3d-wrapper .card-back {
-    height: 19vh;
+    height: 23vh;
   }
 
   .build-tools h3 {
@@ -209,6 +209,12 @@
 
   .card-front .skill-logo {
     height: 5vh;
+  }
+  .card-front .displayFlex, .card-back .displayFlex{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1vh;
   }
   .card-back .displayFlex .skill-logo {
     height: 4vh;

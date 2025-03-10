@@ -10,7 +10,11 @@
   text-align: center;
   user-select: none;
 }
-
+.section .displayFlex{
+  display: flex;
+  justify-content: center;
+  gap: 1vh;
+}
 
 
 [type='checkbox']:checked,
@@ -217,7 +221,7 @@
 }
 
 .card-back .skill-logo {
-  height: 8vh;
+  height: 7vh;
 }
 
 .tech-logo {
