@@ -117,6 +117,14 @@ body {
     justify-content: space-evenly;
   }
 
+
+  .skill-wrapper{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  /* justify-content: center; */
+  }
+
   .hidden {
     display: none;
   }

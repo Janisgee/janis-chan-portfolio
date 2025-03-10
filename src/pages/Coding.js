@@ -139,6 +139,7 @@ const CodingMobile = () => {
           </div>
         </div>
       </div>
+  
       <div className='build-tools'>
         <h3>The build tools I use and more!</h3>
         <div className='tools'>

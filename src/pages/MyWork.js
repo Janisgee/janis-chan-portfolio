@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import HeadingBar from './utilities/HeadingBar';
+import DiscoveryApp from './works-info/DiscoveryApp';
 import MoneyTracker from './works-info/MoneyTracker';
 import Worldwise from './works-info/Worldwise';
 import './MyWork.css';
@@ -52,7 +53,7 @@ const MyWorkDesktop = () => {
           onClick={handleProjectClick}
           id='projectsList'
         >
-          <li data-id='moneyTracker'>Money Tracker Project</li>
+          <li data-id='discoveryApp'>Discovery App Project</li><li data-id='moneyTracker'>Money Tracker Project</li>
           <li data-id='worldwise'>Worldwise Project</li>
           <li data-id='weather'>Weather Project</li>
           <li data-id='forkify'>Forkify Recipe Project</li>
@@ -63,6 +64,7 @@ const MyWorkDesktop = () => {
           <li data-id='movieRating'>Movie Rating Project</li>
           <li data-id='reactQuiz'>React Quiz Project</li>
         </ul>
+        {clickedProjectId === 'discoveryApp' ? <DiscoveryApp /> : ''}
         {clickedProjectId === 'moneyTracker' ? <MoneyTracker /> : ''}
         {clickedProjectId === 'worldwise' ? <Worldwise /> : ''}
         {clickedProjectId === 'weather' ? <Weather /> : ''}
