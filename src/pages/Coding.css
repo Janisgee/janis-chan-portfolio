@@ -172,7 +172,10 @@
   .side-wrapper .coding-mobile {
     height: 100vh;
     display: grid;
-    grid-template-rows: 0fr 0.7fr 1fr;
+    grid-template-rows: 0fr 0.6fr 0.4fr 0.9fr;
+    padding-left: 1vh;
+    padding-right:1vh;
+
   }
 
   .mobile-flippingCard {
@@ -186,18 +189,17 @@
     left: unset;
   }
 
-  .coding-mobile h2 {
+  .coding-mobile h2, h3 {
     text-align: center;
   }
 
   .card-3d-wrapper .card-front,
   .card-3d-wrapper .card-back {
-    height: unset;
+    height: 19vh;
   }
 
   .build-tools h3 {
     text-align: center;
-    margin: 0;
   }
 
   .card-3d-wrap {
@@ -206,19 +208,19 @@
   }
 
   .card-front .skill-logo {
-    height: 6vh;
+    height: 5vh;
   }
   .card-back .displayFlex .skill-logo {
-    height: 5vh;
+    height: 4vh;
   }
   .tools {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vh;
+    gap: 1vh;
     justify-content: space-evenly;
   }
 
-  .tech-logo {
-    height: 8vh;
+  .coding-mobile .tech-logo {
+    height: 5vh;
   }
 }
