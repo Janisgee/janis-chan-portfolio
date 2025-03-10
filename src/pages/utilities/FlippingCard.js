@@ -7,6 +7,7 @@ import nodeJs from '../../images/skills/Node.js_logo.png';
 import nextjs from '../../images/skills/nextjs.png';
 import expressjs from '../../images/skills/ExpressJS-logo.png';
 import mongoDB from '../../images/skills/MongoDB_Logo.svg.png';
+import openAI from '../../images/skills/openAI.png';
 import postgresSQL from '../../images/skills/postgresSQL.png';
 import golang from '../../images/skills/golang.png';
 import python from '../../images/skills/python.png';
@@ -99,6 +100,7 @@ export default function FlippingCard() {
                     alt='postgresSQL'
                     title='postgresSQL'
                   />
+                       <img className='skill-logo' src={openAI} alt='OpenAI' title='Open AI' />
                 </div>
               </div>
             </div>
