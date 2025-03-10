@@ -56,6 +56,10 @@
   width: 80%;
 }
 
+.work-skill{
+  display: flex;
+}
+
 .content {
   display: flex;
   gap: 7vw;
@@ -199,7 +203,7 @@
   }
 
   .skill-image {
-    height: 4vh;
+    height: 2.5vh;
   }
   .clickForMore {
     display: block;
