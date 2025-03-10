@@ -105,7 +105,7 @@ export default function FlippingCard() {
           </div>
         </div>
       </div>
-           <h3 className='language-tool'>The programming language I used.</h3>
+           <h3>The programming language I used.</h3>
       <div className='displayFlex'>
         <img
                     className='skill-logo tech-logo'
