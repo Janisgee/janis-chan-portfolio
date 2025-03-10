@@ -13,6 +13,7 @@ import ShoppingList from './works-info/ShoppingList';
 import MovieRating from './works-info/MovieRating';
 import ReactQuiz from './works-info/ReactQuiz';
 
+import discoveryApp from '../images/works/discovery-app.png';
 import dictionary from '../images/works/dictionary-project.png';
 import forkify from '../images/works/forkifyRecipe.png';
 import moneyTracker from '../images/works/money-tracker.png';
@@ -98,6 +99,23 @@ const MyWorkMobile = () => {
     <div className='myWork-mobile'>
       <h1>My Work</h1>
       <div className='mobile-work'>
+             <div
+          className='mobile-work-container'
+          data-id='moneyTracker'
+          onClick={handleProjectClick}
+          id='projectsList'
+        >
+          <img
+            className='mobile-workImage'
+            src={discoveryApp}
+            alt='Discovery App'
+            title='Discovery App'
+            data-id='discoveryApp'
+          />
+          <div className='text-over-workImage' data-id='discoveryApp'>
+            Discovery App
+          </div>
+        </div>
         <div
           className='mobile-work-container'
           data-id='moneyTracker'
@@ -264,6 +282,7 @@ const MyWorkMobile = () => {
         <div className='crossModule' onClick={handleCloseModule}>
           &times;
         </div>
+        {clickedProjectId === 'discoveryApp' ? <DiscoveryApp /> : ''}
         {clickedProjectId === 'moneyTracker' ? <MoneyTracker /> : ''}
         {clickedProjectId === 'worldwise' ? <Worldwise /> : ''}
         {clickedProjectId === 'weather' ? <Weather /> : ''}
