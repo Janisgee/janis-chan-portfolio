@@ -22,10 +22,6 @@ export default function Contact() {
   const emailJSPublicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   const emailJSTemplateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-  console.log(emailJSServiceID)
-  console.log(emailJSPublicKey)
-  console.log(emailJSTemplateID)
-
 
   function handleSendEmail(e) {
     e.preventDefault();
