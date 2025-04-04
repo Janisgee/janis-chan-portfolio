@@ -166,13 +166,13 @@ const AboutDesktop = () => {
         {clickedAbout !== null && clickedAbout.image.component}
 
         <a
-          href='https://acrobat.adobe.com/id/urn:aaid:sc:AP:32cd7f16-5a03-4d24-baf1-3070bd6720a3'
+          href='./janis_resume.pdf'
           target='_blank'
           alt='Resume'
           rel='noreferrer'
           className='resume'
         >
-          📃Resume
+          📃Résumé
         </a>
       </div>
     </div>
@@ -215,7 +215,7 @@ const AboutMobile = () => {
       <div className='mobile-aboutGroup'>
         <div className='mobile-resume'>
           <a
-            href='https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:e48ad87d-efda-3c15-bd02-57cba9a1e87a'
+            href='./janis_resume.pdf'
             target='_blank'
             alt='Resume'
             rel='noreferrer'
@@ -229,7 +229,7 @@ const AboutMobile = () => {
               data-id='resume'
             />{' '}
           </a>
-          <p className='mobile-tag'>Resume</p>
+          <p className='mobile-tag'>Résumé</p>
         </div>
         {aboutCardData.map((card, ii) => {
           return (
