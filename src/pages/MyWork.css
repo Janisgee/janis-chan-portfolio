@@ -99,6 +99,10 @@
     line-height: 9vh;
     width: 25vw;
   }
+  .work {
+      padding-top: 5vh;
+      width: 32vw;
+  }
   .work p {
     font-size: 1.3em;
   }

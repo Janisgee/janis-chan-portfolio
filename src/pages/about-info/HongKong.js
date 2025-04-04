@@ -16,7 +16,7 @@ export default function HongKong() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `I was born in Hong Kong. \nI have a lot of family and friends👯 in there.\n The food in Kong Kong is really good😋, especially dim sum, tea restaurants, and hawker stalls.`,
+            `I was born in Hong Kong.\nI have a lot of family and friends👯 there.\nThe food in Hong Kong is amazing😋, especially dim sum, tea restaurants, and hawker stalls.`,
             30000,
             '',
           ]}

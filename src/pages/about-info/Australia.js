@@ -16,7 +16,7 @@ export default function Australia() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `Australia is my second home🏡. \nI have been living and working💼 in Australia for a long time.\n I love the weather☀️ and temperature in Perth so much!`,
+            `Australia is my second home🏡.\nI have been living and working💼 here for a long time.\nI love the sunny weather☀️ and pleasant temperature in Perth!`,
             30000,
             '',
           ]}

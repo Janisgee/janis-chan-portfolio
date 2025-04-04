@@ -16,7 +16,7 @@ export default function Programming() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `In programming🖥️, I learn mainly Javascript language. \n I have knowledge in React, Express, MongonDB, HTML, CSS, JS. \n I would like to be a full stack software developer👩‍💻.`,
+            `In programming🖥️, I began my journey with JavaScript⌨️ and have since learned Python and Go as well.\nI have knowledge of React, Express, MongoDB, Next.js, HTML, CSS, and JavaScript.\nI aspire to become a full-stack software developer👩‍💻.`,
             30000,
             '',
           ]}

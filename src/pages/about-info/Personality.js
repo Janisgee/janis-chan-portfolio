@@ -16,7 +16,7 @@ export default function Personality() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `I am a team player, I like to work in a team. \n I like to explorer and learn new things. When I meet with problems, I will try different ways to solve it. 😉 `,
+            `I am a team player and enjoy working in a team.\nI love exploring and learning new things.\nWhen I encounter problems, I try different ways to solve them. 😉`,
             30000,
             '',
           ]}

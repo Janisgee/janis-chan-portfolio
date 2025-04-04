@@ -16,7 +16,7 @@ export default function Design() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `I have done some small creative projects by using photoshop, helping company🏬 or restaurant🍽️ to create their catalogs or menus. \n`,
+            `I have worked on small creative projects using Photoshop, helping companies🏬 and restaurants🍽️ design their catalogs and menus.\n`,
             30000,
             '',
           ]}

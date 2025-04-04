@@ -16,7 +16,7 @@ export default function Hobby() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `At my free time, i like to watch movie🍿, yoga, and do some cooking🍴. I love to play board game,switch games and computer games🕹️ with friends. \n `,
+            `In my free time, I like to watch movies🍿, practice yoga, and cook🍴. I also love playing board games, Switch games, and computer games🕹️ with friends.\n`,
             30000,
             '',
           ]}
