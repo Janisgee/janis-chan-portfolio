@@ -16,7 +16,7 @@ export default function Study() {
       <h5 className='aboutParagraph'>
         <TypeAnimation
           sequence={[
-            `I have a bachelor degree🎓 in Commerce (Sales, marketing and advertising) at Curtin University. \n After that, I started to feel interested in software🖥️.\n I joined SheCodes and Udemy to enhance my programming skills🆙 in software.`,
+            `I have a bachelor's degree🎓 in Commerce (Sales, Marketing, and Advertising) from Curtin University.\nAfter that, I developed an interest in software🖥️.\nTo enhance my programming skills🆙, I joined online courses from SheCodes, Udemy, and Boot.dev.`,
             30000,
             '',
           ]}
