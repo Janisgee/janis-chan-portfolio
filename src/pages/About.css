@@ -227,4 +227,7 @@
   .mobile-aboutModule {
     width: 90%;
   }
+    .mobile-aboutModule .aboutImage img {
+    height: 9vh;
+  }
 }
